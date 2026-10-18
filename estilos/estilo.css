@@ -24,7 +24,7 @@ i{
 .aula-card{
     width: 100%;
     min-width: 0;
-    min-height: 5rem;
+    min-height: 8rem;
     margin: 0;
     padding: 0.75rem;
     display: flex;
@@ -75,6 +75,10 @@ i{
     font-size: 0.65rem;
     line-height: 1.2;
     overflow-wrap: anywhere;
+}
+
+.aula-card .horario-aula{
+    margin-top: auto;
 }
 
 .aula-card .card-text p{
