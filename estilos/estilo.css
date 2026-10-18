@@ -3,10 +3,12 @@ body{
     margin: 0;
     font-family: 'poppins';
     font-weight: 500;
+    background-image: url("/img/daract.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .imagen{
-    background-image: linear-gradient(to bottom, #36127B, white);
     width: 100%;
     height: 150px;
 }
@@ -26,7 +28,7 @@ i{
     min-width: 0;
     min-height: 8rem;
     margin: 0;
-    padding: 0.75rem;
+    padding: 0.5rem;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -63,8 +65,17 @@ i{
 }
 
 .numero-aula{
-    font-size: 1.1rem;
+    font-size: 2rem;
     font-weight: 600;
+    color:#36127B;
+}
+
+.materia-aula{
+    margin-top: auto;
+    font-size: 0.68rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
 }
 
 .aula-card .card-text{
@@ -78,7 +89,14 @@ i{
 }
 
 .aula-card .horario-aula{
-    margin-top: auto;
+    margin-top: 0.2rem;
+}
+
+.carrera-aula{
+    color: #666;
+    font-size: 0.55rem;
+    line-height: 1.15;
+    text-align: center;
 }
 
 .aula-card .card-text p{
@@ -212,6 +230,11 @@ i{
 
 .bloque-clase span{
     font-size: 0.7rem;
+}
+
+.bloque-clase .carrera-clase{
+    margin-top: auto;
+    font-weight: 600;
 }
 
 .sin-clases{
