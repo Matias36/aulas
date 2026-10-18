@@ -29,13 +29,22 @@ uicons-regular-rounded.css'>
     </header>
     <main class="container-fluid">
         <time id="reloj-argentina" class="reloj-argentina"></time>
+        <div id="caja-aulas">
+            <!-- Controles de filtro: Todos / Disponibles / Empezadas -->
+            <div id="filtro-aulas" class="filtro-aulas">
+                <button type="button" class="btn-filtro" data-filtro="all">Todas</button>
+                <button type="button" class="btn-filtro" data-filtro="disponibles">Disponibles</button>
+                <button type="button" class="btn-filtro" data-filtro="empezadas">Empezadas</button>
+            </div>
+        <h2>Planta Baja</h2>
         <section id="vista-aulas" class="vista">
+
             <div id="aulas-grid" class="aulas-grid"></div>
         </section>
-
+        </div>
         <section id="vista-horarios" class="vista" hidden>
             <button id="volver-aulas" class="volver-aulas" type="button">
-                <i class="fi fi-rr-angle-left" aria-hidden="true"></i>
+                <i class="fi fi-rr-angle-left violeta" aria-hidden="true"></i>
                 Volver a las aulas
             </button>
             <h1 id="titulo-horarios" class="titulo-horarios"></h1>
@@ -46,17 +55,18 @@ uicons-regular-rounded.css'>
             </div>
         </section>
     </main>
-
     <script>
         const aulas = ['01', '02', '03', '04', '05', '06', '07', '08', '09'];
+        // Ahora los horarios se guardan en minutos totales desde las 00:00.
+        // Ejemplo: 8:30 = 8*60 + 30 = 510; 10:15 = 10*60 + 15 = 615.
         const clasesPorAula = {
             '01': [
                 {
                     materia: 'Laboratorio I',
                     carrera: 'Ingeniería Química',
                     profesor: 'PEPE',
-                    inicio: 12,
-                    fin: 15
+                    inicio: 20 * 60 + 13,
+                    fin: 21 * 60 + 15
                 }
             ]
         };
@@ -92,15 +102,63 @@ uicons-regular-rounded.css'>
             aulasGrid.appendChild(tarjeta);
         });
 
-        for (let hora = 8; hora < 22; hora += 1) {
+        // Se muestran las etiquetas de horario desde 08:00 hasta 21:00 para mantener la vista legible.
+        for (let hora = 8; hora <= 22; hora += 1) {
             const etiqueta = document.createElement('div');
             etiqueta.className = 'etiqueta-horario';
-            etiqueta.textContent = formatearHora(hora);
+            etiqueta.textContent = formatearHora(hora * 60);
             etiquetasHorarios.appendChild(etiqueta);
         }
 
-        function formatearHora(hora) {
-            return `${String(hora).padStart(2, '0')}:00`;
+        // ------------------ FILTRO DE AULAS ------------------
+        // Variable que almacena el filtro actual: 'all' | 'disponibles' | 'empezadas'
+        let filtroActual = 'all';
+
+        // Aplica el filtro a las tarjetas de aulas. Recibe minutosActuales opcional
+        function aplicarFiltro(minutosActualesParam) {
+            const minutos = typeof minutosActualesParam === 'number' ? minutosActualesParam : obtenerMinutosArgentina();
+            for (const tarjeta of aulasGrid.querySelectorAll('.aula-card')) {
+                const numero = tarjeta.dataset.aula;
+                const clases = clasesPorAula[numero] || [];
+                const claseActiva = clases.find((clase) => estadoDeClase(clase, minutos) === 'en-curso');
+                const clasePronta = clases.find((clase) => estadoDeClase(clase, minutos) === 'pronta');
+                const estado = claseActiva
+                    ? 'en-curso'
+                    : clasePronta ? 'pronta' : clases.length ? 'sin-actividad' : 'sin-clases';
+
+                let visible = true;
+                if (filtroActual === 'disponibles') {
+                    visible = (estado === 'sin-actividad' || estado === 'sin-clases');
+                } else if (filtroActual === 'empezadas') {
+                    visible = (estado === 'en-curso');
+                }
+
+                tarjeta.hidden = !visible;
+            }
+        }
+
+        // Inicializa los botones de filtro y su comportamiento
+        document.querySelectorAll('.btn-filtro').forEach((boton) => {
+            boton.addEventListener('click', (e) => {
+                const nuevo = boton.dataset.filtro;
+                filtroActual = nuevo;
+                // Marcar botón activo (simple) y desmarcar los demás
+                document.querySelectorAll('.btn-filtro').forEach((b) => b.classList.toggle('activo', b === boton));
+                // Aplicar el filtro inmediatamente usando la hora actual
+                aplicarFiltro(obtenerMinutosArgentina());
+            });
+        });
+
+        // Aplica el filtro inicial (mostrar todas)
+        aplicarFiltro();
+
+        // -------------------------------------------------------
+
+        // La función ahora recibe minutos totales y devuelve HH:MM.
+        function formatearHora(minutosTotales) {
+            const horas = Math.floor(minutosTotales / 60);
+            const minutos = minutosTotales % 60;
+            return `${String(horas).padStart(2, '0')}:${String(minutos).padStart(2, '0')}`;
         }
 
         function obtenerMinutosArgentina() {
@@ -115,9 +173,10 @@ uicons-regular-rounded.css'>
             return hora * 60 + minuto;
         }
 
+        // La comparación usa minutos absolutos, por eso permite horarios con 30 o 45 minutos.
         function estadoDeClase(clase, minutosActuales) {
-            const inicio = clase.inicio * 60;
-            const fin = clase.fin * 60;
+            const inicio = clase.inicio;
+            const fin = clase.fin;
 
             if (minutosActuales >= inicio && minutosActuales < fin) {
                 return 'en-curso';
@@ -184,6 +243,8 @@ uicons-regular-rounded.css'>
             if (aulaSeleccionada !== null && !vistaHorarios.hidden) {
                 renderizarClases(aulaSeleccionada, minutosActuales);
             }
+            // Reaplica el filtro cada vez que se actualizan las tarjetas.
+            aplicarFiltro(minutosActuales);
         }
 
         function renderizarClases(numero, minutosActuales) {
@@ -193,8 +254,12 @@ uicons-regular-rounded.css'>
             for (const clase of clases) {
                 const bloque = document.createElement('article');
                 const estado = estadoDeClase(clase, minutosActuales);
+                // Esto calcula la fila y la altura del bloque usando horas, manteniendo la grilla legible.
+                const inicioFila = Math.max(1, Math.floor((clase.inicio - 8 * 60) / 60) + 1);
+                const duracionHoras = Math.max(1, Math.ceil((clase.fin - clase.inicio) / 60));
+
                 bloque.className = `bloque-clase ${estado === 'en-curso' ? 'clase-en-curso' : estado === 'pronta' ? 'clase-pronta' : ''}`;
-                bloque.style.gridRow = `${clase.inicio - 7} / ${clase.fin - 7}`;
+                bloque.style.gridRow = `${inicioFila} / span ${duracionHoras}`;
                 bloque.innerHTML = `
                     <strong>${clase.materia}</strong>
                     <span>${formatearHora(clase.inicio)} a ${formatearHora(clase.fin)}</span>
@@ -225,6 +290,9 @@ uicons-regular-rounded.css'>
         function renderizarVistaHorarios(numero) {
             aulaSeleccionada = numero;
             tituloHorarios.textContent = `Aula ${numero}`;
+            document.getElementById('filtro-aulas').hidden = true;
+            document.querySelector('#caja-aulas h2').hidden = true;
+            document.getElementById('reloj-argentina').hidden = true;
             vistaAulas.hidden = true;
             vistaHorarios.hidden = false;
             actualizarRelojYTarjetas();
@@ -251,6 +319,8 @@ uicons-regular-rounded.css'>
 
         function mostrarVistaAulas() {
             aulaSeleccionada = null;
+            document.getElementById('filtro-aulas').hidden = false;
+document.querySelector('#caja-aulas h2').hidden = false;
             vistaHorarios.hidden = true;
             vistaAulas.hidden = false;
         }

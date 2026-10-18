@@ -1,3 +1,8 @@
+.violeta{
+    color: #36127B !important;
+}
+
+
 body{
     padding: 0;
     margin: 0;
@@ -21,6 +26,27 @@ body{
 i{
     font-size: 1.5rem;
     color: white;
+}
+
+#caja-aulas{
+    display: flex;
+    flex-direction: column;
+    background-color: #198754;
+    padding: 0.5rem;
+    border-radius: 20px;
+
+}
+
+.filtro-aulas{
+    border: #36127B!important;
+    padding:1rem; 
+    display:flex; 
+    gap:0.5rem; 
+    align-items:center;
+}
+
+h2{
+    padding-left: 1rem;
 }
 
 .aula-card{
@@ -122,6 +148,7 @@ i{
 }
 
 .reloj-argentina{
+    display: none;
     margin: 0.75rem 1rem 0;
     color: #36127B;
     font-size: 0.9rem;
