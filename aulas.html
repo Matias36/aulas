@@ -27,39 +27,193 @@ uicons-regular-rounded.css'>
         
     </nav>
     </header>
-    <div class="container-fluid">
-        <div class="filtros">
+    <main class="container-fluid">
+        <time id="reloj-argentina" class="reloj-argentina"></time>
+        <section id="vista-aulas" class="vista">
+            <div id="aulas-grid" class="aulas-grid"></div>
+        </section>
 
-        </div>
-        <div class="aulas-grid">
-<div class="card aula-card">
-  <div class="linea">
-    <h3>01</h3>
-    <i class="fi fi-ss-circle-small ocupado" style="color: rgb(255, 0, 0);"></i>
-  </div>
-  <div class="card-text">
-    <p>12:00 a 15:00</p>
-  </div>
-</div>
-<div class="card aula-card">
-  <div class="linea">
-    <h3>01</h3>
-    <i class="fi fi-ss-circle-small ocupado" style="color: rgb(255, 0, 0);"></i>
-  </div>
-  <div class="card-text">
-    <p>12:00 a 15:00</p>
-  </div>
-</div>
-<div class="card aula-card">
-  <div class="linea">
-    <h3>01</h3>
-    <i class="fi fi-ss-circle-small ocupado" style="color: rgb(255, 0, 0);"></i>
-  </div>
-  <div class="card-text">
-    <p>12:00 a 15:00</p>
-  </div>
-</div>
-    </div>
-    </div>
+        <section id="vista-horarios" class="vista" hidden>
+            <button id="volver-aulas" class="volver-aulas" type="button">
+                <i class="fi fi-rr-angle-left" aria-hidden="true"></i>
+                Volver a las aulas
+            </button>
+            <h1 id="titulo-horarios" class="titulo-horarios"></h1>
+            <p class="ayuda-horarios">Horarios de 08:00 a 22:00</p>
+            <div class="grilla-horarios">
+                <div id="etiquetas-horarios" class="etiquetas-horarios" aria-hidden="true"></div>
+                <div id="pista-horarios" class="pista-horarios"></div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const aulas = ['01', '02', '03', '04', '05', '06', '07', '08', '09'];
+        const clasesPorAula = {
+            '01': [
+                { materia: 'Ingeniería Química', inicio: 11, fin: 15 }
+            ]
+        };
+
+        const aulasGrid = document.querySelector('#aulas-grid');
+        const vistaAulas = document.querySelector('#vista-aulas');
+        const vistaHorarios = document.querySelector('#vista-horarios');
+        const etiquetasHorarios = document.querySelector('#etiquetas-horarios');
+        const pistaHorarios = document.querySelector('#pista-horarios');
+        const tituloHorarios = document.querySelector('#titulo-horarios');
+        const relojArgentina = document.querySelector('#reloj-argentina');
+        const zonaHoraria = 'America/Argentina/Buenos_Aires';
+        let aulaSeleccionada = null;
+
+        aulas.forEach((numero) => {
+            const clases = clasesPorAula[numero] || [];
+            const tarjeta = document.createElement('button');
+            tarjeta.type = 'button';
+            tarjeta.className = 'card aula-card';
+            tarjeta.setAttribute('aria-label', `Ver horarios del aula ${numero}`);
+            tarjeta.innerHTML = `
+                <span class="linea">
+                    <span class="numero-aula">${numero}</span>
+                    <i class="fi fi-ss-circle-small ocupado" aria-hidden="true"></i>
+                </span>
+                <span class="card-text horario-aula"></span>
+                <span class="estado-aula"></span>
+            `;
+            tarjeta.dataset.aula = numero;
+            tarjeta.addEventListener('click', () => mostrarHorarios(numero));
+            aulasGrid.appendChild(tarjeta);
+        });
+
+        for (let hora = 8; hora < 22; hora += 1) {
+            const etiqueta = document.createElement('div');
+            etiqueta.className = 'etiqueta-horario';
+            etiqueta.textContent = formatearHora(hora);
+            etiquetasHorarios.appendChild(etiqueta);
+        }
+
+        function formatearHora(hora) {
+            return `${String(hora).padStart(2, '0')}:00`;
+        }
+
+        function obtenerMinutosArgentina() {
+            const partes = new Intl.DateTimeFormat('en-GB', {
+                timeZone: zonaHoraria,
+                hour: '2-digit',
+                minute: '2-digit',
+                hourCycle: 'h23'
+            }).formatToParts(new Date());
+            const hora = Number(partes.find((parte) => parte.type === 'hour').value);
+            const minuto = Number(partes.find((parte) => parte.type === 'minute').value);
+            return hora * 60 + minuto;
+        }
+
+        function estadoDeClase(clase, minutosActuales) {
+            const inicio = clase.inicio * 60;
+            const fin = clase.fin * 60;
+
+            if (minutosActuales >= inicio && minutosActuales < fin) {
+                return 'en-curso';
+            }
+            if (minutosActuales >= inicio - 60 && minutosActuales < inicio) {
+                return 'pronta';
+            }
+            return 'sin-actividad';
+        }
+
+        function actualizarRelojYTarjetas() {
+            const ahora = new Date();
+            const minutosActuales = obtenerMinutosArgentina();
+            relojArgentina.dateTime = ahora.toISOString();
+            relojArgentina.textContent = `${new Intl.DateTimeFormat('es-AR', {
+                timeZone: zonaHoraria,
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hourCycle: 'h23'
+            }).format(ahora)} · Buenos Aires, Argentina`;
+
+            for (const tarjeta of aulasGrid.querySelectorAll('.aula-card')) {
+                const numero = tarjeta.dataset.aula;
+                const clases = clasesPorAula[numero] || [];
+                const claseActiva = clases.find(
+                    (clase) => estadoDeClase(clase, minutosActuales) === 'en-curso'
+                );
+                const clasePronta = clases.find(
+                    (clase) => estadoDeClase(clase, minutosActuales) === 'pronta'
+                );
+                const claseVisible = claseActiva || clasePronta;
+                const estado = claseActiva
+                    ? 'en-curso'
+                    : clasePronta ? 'pronta' : clases.length ? 'sin-actividad' : 'sin-clases';
+                const indicador = tarjeta.querySelector('.ocupado');
+                const horario = tarjeta.querySelector('.horario-aula');
+                const etiquetaEstado = tarjeta.querySelector('.estado-aula');
+
+                indicador.classList.toggle('aula-ocupada', estado === 'en-curso');
+                indicador.classList.toggle('aula-pronta', estado === 'pronta');
+                indicador.classList.toggle('aula-libre', estado === 'sin-actividad' || estado === 'sin-clases');
+                horario.textContent = claseVisible
+                    ? `${formatearHora(claseVisible.inicio)} a ${formatearHora(claseVisible.fin)}`
+                    : clases.length ? '' : 'Sin clases programadas';
+                etiquetaEstado.textContent = estado === 'en-curso'
+                    ? 'En curso'
+                    : estado === 'pronta' ? 'Empieza pronto' : estado === 'sin-actividad' ? 'Disponible' : '';
+                etiquetaEstado.className = `estado-aula estado-${estado}`;
+                tarjeta.setAttribute(
+                    'aria-label',
+                    estado === 'pronta'
+                        ? `Aula ${numero}: empieza pronto, de ${formatearHora(clasePronta.inicio)} a ${formatearHora(clasePronta.fin)}`
+                        : estado === 'en-curso'
+                            ? `Aula ${numero}: en curso, de ${formatearHora(claseActiva.inicio)} a ${formatearHora(claseActiva.fin)}`
+                            : `Ver horarios del aula ${numero}`
+                );
+            }
+
+            if (aulaSeleccionada !== null && !vistaHorarios.hidden) {
+                renderizarClases(aulaSeleccionada, minutosActuales);
+            }
+        }
+
+        function renderizarClases(numero, minutosActuales) {
+            const clases = clasesPorAula[numero] || [];
+            pistaHorarios.replaceChildren();
+
+            for (const clase of clases) {
+                const bloque = document.createElement('article');
+                const estado = estadoDeClase(clase, minutosActuales);
+                bloque.className = `bloque-clase ${estado === 'en-curso' ? 'clase-en-curso' : estado === 'pronta' ? 'clase-pronta' : ''}`;
+                bloque.style.gridRow = `${clase.inicio - 7} / ${clase.fin - 7}`;
+                bloque.innerHTML = `
+                    <strong>${clase.materia}</strong>
+                    <span>${formatearHora(clase.inicio)} a ${formatearHora(clase.fin)}</span>
+                    ${estado === 'pronta' ? '<span>Empieza pronto</span>' : ''}
+                `;
+                pistaHorarios.appendChild(bloque);
+            }
+
+            if (clases.length === 0) {
+                const mensaje = document.createElement('p');
+                mensaje.className = 'sin-clases';
+                mensaje.textContent = 'No hay clases programadas para esta aula.';
+                pistaHorarios.appendChild(mensaje);
+            }
+        }
+
+        function mostrarHorarios(numero) {
+            aulaSeleccionada = numero;
+            tituloHorarios.textContent = `Aula ${numero}`;
+            vistaAulas.hidden = true;
+            vistaHorarios.hidden = false;
+            actualizarRelojYTarjetas();
+        }
+
+        document.querySelector('#volver-aulas').addEventListener('click', () => {
+            vistaHorarios.hidden = true;
+            vistaAulas.hidden = false;
+        });
+
+        actualizarRelojYTarjetas();
+        setInterval(actualizarRelojYTarjetas, 15_000);
+    </script>
 </body>
 </html>
