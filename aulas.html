@@ -200,6 +200,15 @@ uicons-regular-rounded.css'>
         }
 
         function mostrarHorarios(numero) {
+            // Guarda la vista y el aula en el historial para que Atrás del celular vuelva a aulas.
+            history.pushState(
+                Object.assign({}, history.state, { vista: 'horarios', aula: numero }),
+                ''
+            );
+            renderizarVistaHorarios(numero);
+        }
+
+        function renderizarVistaHorarios(numero) {
             aulaSeleccionada = numero;
             tituloHorarios.textContent = `Aula ${numero}`;
             vistaAulas.hidden = true;
@@ -208,9 +217,29 @@ uicons-regular-rounded.css'>
         }
 
         document.querySelector('#volver-aulas').addEventListener('click', () => {
+            // Usa el mismo historial que el botón Atrás físico o del navegador.
+            if (history.state && history.state.vista === 'horarios') {
+                history.back();
+                return;
+            }
+            mostrarVistaAulas();
+        });
+
+        // Al retroceder en el historial, restaura la vista que corresponda.
+        window.addEventListener('popstate', (evento) => {
+            const estado = evento.state;
+            if (estado && estado.vista === 'horarios' && aulas.includes(estado.aula)) {
+                renderizarVistaHorarios(estado.aula);
+                return;
+            }
+            mostrarVistaAulas();
+        });
+
+        function mostrarVistaAulas() {
+            aulaSeleccionada = null;
             vistaHorarios.hidden = true;
             vistaAulas.hidden = false;
-        });
+        }
 
         actualizarRelojYTarjetas();
         setInterval(actualizarRelojYTarjetas, 15_000);
