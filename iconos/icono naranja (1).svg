@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350.829 316.641">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 34.044px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #f2842f;
+      }
+
+      .cls-2 {
+        stroke-width: 16.895px;
+      }
+
+      .cls-3 {
+        fill: #f2842f;
+        stroke-miterlimit: 10;
+        stroke-width: .851px;
+      }
+    </style>
+  </defs>
+  <g id="Capa_1-2" data-name="Capa 1">
+    <path class="cls-1" d="M99.425,35.632h234.382v177.561c0,47.7-38.727,86.427-86.427,86.427H17.022V118.035c0-45.479,36.924-82.403,82.403-82.403Z"/>
+    <rect class="cls-2" x="88.466" y="17.281" width="22.389" height="4.722" transform="translate(80.019 119.303) rotate(-90)"/>
+    <rect class="cls-2" x="238.562" y="17.281" width="22.389" height="4.722" transform="translate(230.114 269.398) rotate(-90)"/>
+    <circle class="cls-3" cx="97.938" cy="127.476" r="16.933"/>
+    <circle class="cls-3" cx="149.658" cy="128.178" r="16.232"/>
+    <circle class="cls-3" cx="200.773" cy="128.178" r="16.232"/>
+    <circle class="cls-3" cx="250.862" cy="128.178" r="16.232"/>
+    <circle class="cls-3" cx="97.938" cy="175.128" r="16.933"/>
+    <circle class="cls-3" cx="149.658" cy="176.531" r="16.232"/>
+    <circle class="cls-3" cx="200.773" cy="176.531" r="16.232"/>
+    <circle class="cls-3" cx="250.862" cy="176.531" r="16.232"/>
+    <circle class="cls-3" cx="97.938" cy="220.739" r="16.933"/>
+    <circle class="cls-3" cx="149.658" cy="222.142" r="16.232"/>
+    <circle class="cls-3" cx="200.773" cy="222.142" r="16.232"/>
+    <circle class="cls-3" cx="251.694" cy="222.142" r="15.399"/>
+  </g>
+</svg>
