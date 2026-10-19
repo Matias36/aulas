@@ -491,8 +491,8 @@ uicons-regular-rounded.css'>
                 const tieneNotificacion = materiaTieneNotificacion(clase.materia);
                 // Esto calcula la fila y la altura del bloque usando horas, manteniendo la grilla legible.
                 const iconoCampana = tieneNotificacion
-                ? 'iconos/icono azul(8).svg'
-                : 'iconos/icono blanco(9).svg'
+                ? 'iconos/icono blanco (9).svg'
+                : 'iconos/icono azul (8).svg'
                 const inicioFila = Math.max(1, Math.floor((clase.inicio - 8 * 60) / 60) + 1);
                 const duracionHoras = Math.max(1, Math.ceil((clase.fin - clase.inicio) / 60));
 
