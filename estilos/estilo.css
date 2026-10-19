@@ -83,16 +83,35 @@ main.container-fluid{
     padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
 }
 
+#materias{
+    background: none;
+    border: none;
+    padding: 0.25rem;
+    cursor: pointer;
+}
+
+#materias:focus-visible{
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+.selector-vista{
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+}
+
 /* Barra de navegación inferior, visible tanto en aulas como en horarios */
 .navbar-inferior{
     position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 1100;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     padding: 0.55rem 1rem calc(0.55rem + env(safe-area-inset-bottom));
-    border-top: 1px solid #dedee5;
     background: #36127B;
     box-shadow: 0 -3px 12px rgba(37, 60, 109, 0.08);
 }
@@ -334,6 +353,61 @@ nav i{
     gap: 0.75rem;
     padding: 1rem;
 }
+
+.aulas-grid.vista-lista{
+    grid-template-columns: 1fr;
+}
+
+.aulas-grid.vista-lista .aula-card{
+    display: grid;
+    grid-template-columns: 3.5rem minmax(0, 1fr) minmax(5rem, 0.7fr);
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+    gap: 0.25rem 0.75rem;
+    min-height: 5.5rem;
+    aspect-ratio: auto;
+}
+
+.aulas-grid.vista-lista .aula-card .linea{
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+.aulas-grid.vista-lista .materia-aula{
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 0;
+    text-align: left;
+}
+
+.aulas-grid.vista-lista .horario-aula{
+    grid-column: 3;
+    grid-row: 1;
+    margin-top: 0;
+    text-align: left;
+}
+
+.aulas-grid.vista-lista .carrera-aula{
+    grid-column: 2;
+    grid-row: 2;
+    text-align: left;
+}
+
+.aulas-grid.vista-lista .estado-aula{
+    grid-column: 3;
+    grid-row: 2;
+    margin-top: 0;
+    text-align: left;
+}
+
+@media (max-width: 480px){
+    .aulas-grid.vista-lista .aula-card{
+        grid-template-columns: 3rem minmax(0, 1fr) auto;
+        gap: 0.25rem 0.5rem;
+    }
+}
+
+
 
 
 .aula-card .linea{

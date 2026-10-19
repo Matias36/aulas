@@ -16,13 +16,13 @@ uicons-regular-rounded.css'>
 <body>
     <header class="imagen">
     <nav class="navbar">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="edificios.html">
             <i class="fi fi-rr-angle-left"> Daract I</i>
         </a>
         <span class="navbar-text">
-            <a href="#">
-                <img src="iconos/icono blanco (6).svg" alt="materias" height="20px" class="materias">
-            </a>
+            <button id="materias" type="button" aria-label="Cambiar a vista de lista" title="Cambiar a vista de lista">
+                <img src="iconos/icono blanco (6).svg" alt="" height="20px" class="selector-vista">
+            </button>
       </span>
         
     </nav>
@@ -38,12 +38,12 @@ uicons-regular-rounded.css'>
             </div>
         <section id="vista-aulas" class="vista">
 
-            <div id="aulas-grid" class="aulas-grid"></div>
+            <div id="aulas-grid" class="aulas-grid vista-cuadricula"></div>
         </section>
         </div>
         <section id="vista-horarios" class="vista" hidden>
             <button id="volver-aulas" class="volver-aulas" type="button">
-                <i class="fi fi-rr-angle-left violeta" aria-hidden="true"></i>
+                <i class="fi fi-rr-angle-left violeta volver" aria-hidden="true"></i>
                 <p>Volver a las aulas</p>
             </button>
             <div class="horarios-header">
@@ -84,169 +84,171 @@ uicons-regular-rounded.css'>
         const clasesPorAula = {
             '01': {
         lunes: [
-            { materia: 'Química General e Inorgánica', carrera: 'Licenciatura en Biotecnología', profesor: 'CENIQUEL Marcos / a designar / a designar', inicio: 9 * 60 + 0, fin: 14 * 60 + 0 },
-            { materia: 'Introducción a la Biotecnología', carrera: 'Licenciatura en Biotecnología', profesor: 'RIVA Diego / CURRÁ Anabella', inicio: 16 * 60 + 0, fin: 20 * 60 + 0 }
+            { materia: 'Química General e Inorgánica', carrera: 'Licenciatura en Biotecnología', profesor: 'Docente de ejemplo', inicio: 9 * 60 + 15, fin: 14 * 60 + 15 },
+            { materia: 'Introducción a la Biotecnología', carrera: 'Licenciatura en Biotecnología', profesor: 'Docente de ejemplo', inicio: 16 * 60 + 15, fin: 20 * 60 + 15 }
         ],
         martes: [
-            { materia: 'Introducción a la Biotecnología', carrera: 'Licenciatura en Biotecnología', profesor: 'RIVA Diego / LOVERA Tania', inicio: 17 * 60 + 0, fin: 21 * 60 + 0 },
-            { materia: 'Introducción a la Biotecnología', carrera: 'Licenciatura en Biotecnología', profesor: 'RIVA Diego / CURRÁ Anabella', inicio: 17 * 60 + 0, fin: 21 * 60 + 0 }
+            { materia: 'Introducción a la Biotecnología', carrera: 'Licenciatura en Biotecnología', profesor: 'Docente de ejemplo', inicio: 17 * 60 + 15, fin: 21 * 60 + 15 },
+            { materia: 'Introducción a la Biotecnología', carrera: 'Licenciatura en Biotecnología', profesor: 'Docente de ejemplo', inicio: 17 * 60 + 15, fin: 21 * 60 + 15 }
         ],
         miércoles: [
-            { materia: 'Química General e Inorgánica', carrera: 'Licenciatura en Biotecnología', profesor: 'CENIQUEL Marcos / a designar / a designar', inicio: 9 * 60 + 0, fin: 14 * 60 + 0 },
-            { materia: 'Química General e Inorgánica', carrera: 'Licenciatura en Biotecnología', profesor: 'CENIQUEL Marcos / FERNANDEZ CORUJO Victoria / MACORETTA Christian Leandro', inicio: 9 * 60 + 0, fin: 14 * 60 + 0 }
+            { materia: 'Química General e Inorgánica', carrera: 'Licenciatura en Biotecnología', profesor: 'Docente de ejemplo', inicio: 9 * 60 + 15, fin: 14 * 60 + 15 },
+            { materia: 'Química General e Inorgánica', carrera: 'Licenciatura en Biotecnología', profesor: 'Docente de ejemplo', inicio: 9 * 60 + 15, fin: 14 * 60 + 15 }
         ],
         jueves: [
-            { materia: 'Química General e Inorgánica', carrera: 'Licenciatura en Biotecnología', profesor: 'CENIQUEL Marcos / FERNANDEZ CORUJO Victoria / MACORETTA Christian Leandro', inicio: 9 * 60 + 0, fin: 14 * 60 + 0 },
-            { materia: 'Introducción a la Biotecnología', carrera: 'Licenciatura en Biotecnología', profesor: 'RIVA Diego / LOVERA Tania', inicio: 17 * 60 + 0, fin: 21 * 60 + 0 }
+            { materia: 'Química General e Inorgánica', carrera: 'Licenciatura en Biotecnología', profesor: 'Docente de ejemplo', inicio: 9 * 60 + 15, fin: 14 * 60 + 15 },
+            { materia: 'Introducción a la Biotecnología', carrera: 'Licenciatura en Biotecnología', profesor: 'Docente de ejemplo', inicio: 17 * 60 + 15, fin: 21 * 60 + 15 }
         ]
     },
     '05': {
         lunes: [
-            { materia: 'Álgebra y Geometría Analítica', carrera: 'Ingeniería Electrónica', profesor: 'JADER Daniel / CASAL Pablo', inicio: 15 * 60 + 0, fin: 18 * 60 + 0 }
+            { materia: 'Álgebra y Geometría Analítica', carrera: 'Ingeniería Electrónica', profesor: 'Docente de ejemplo', inicio: 15 * 60 + 15, fin: 18 * 60 + 15 }
         ],
         viernes: [
-            { materia: 'Álgebra y Geometría Analítica', carrera: 'Ingeniería Electrónica', profesor: 'JADER Daniel / CASAL Pablo', inicio: 16 * 60 + 0, fin: 18 * 60 + 0 }
+            { materia: 'Álgebra y Geometría Analítica', carrera: 'Ingeniería Electrónica', profesor: 'Docente de ejemplo', inicio: 16 * 60 + 15, fin: 18 * 60 + 15 }
         ]
     },
     '06': {
         lunes: [
-            { materia: 'Ecología y Recursos Naturales', carrera: 'Licenciatura en Gestión Ambiental', profesor: 'CONOCHELLI Maria Belén / GARCÍA Victoria', inicio: 17 * 60 + 0, fin: 19 * 60 + 0 }
+            { materia: 'Ecología y Recursos Naturales', carrera: 'Licenciatura en Gestión Ambiental', profesor: 'Docente de ejemplo', inicio: 17 * 60 + 15, fin: 19 * 60 + 15 }
         ],
         miércoles: [
-            { materia: 'Álgebra y Geometría Analítica', carrera: 'Ingeniería Electrónica', profesor: 'FERNÁNDEZ Perla Daniela / LÓPEZ Ernesto', inicio: 8 * 60 + 0, fin: 10 * 60 + 0 },
-            { materia: 'Álgebra y Geometría Analítica', carrera: 'Ingeniería Electrónica', profesor: 'FERNÁNDEZ Perla Daniela / LÓPEZ Ernesto', inicio: 10 * 60 + 0, fin: 13 * 60 + 0 }
+            { materia: 'Álgebra y Geometría Analítica', carrera: 'Ingeniería Electrónica', profesor: 'Docente de ejemplo', inicio: 8 * 60 + 15, fin: 10 * 60 + 15 },
+            { materia: 'Álgebra y Geometría Analítica', carrera: 'Ingeniería Electrónica', profesor: 'Docente de ejemplo', inicio: 10 * 60 + 15, fin: 13 * 60 + 15 }
         ],
         jueves: [
-            { materia: 'Ecología y Recursos Naturales', carrera: 'Licenciatura en Gestión Ambiental', profesor: 'CONOCHELLI Maria Belén / GARCÍA Victoria', inicio: 17 * 60 + 0, fin: 20 * 60 + 0 }
+            { materia: 'Ecología y Recursos Naturales', carrera: 'Licenciatura en Gestión Ambiental', profesor: 'Docente de ejemplo', inicio: 17 * 60 + 15, fin: 20 * 60 + 15 }
         ],
         viernes: [
-            { materia: 'Álgebra y Geometría Analítica', carrera: 'Ingeniería Electrónica', profesor: 'FERNÁNDEZ Perla Daniela / LÓPEZ Ernesto', inicio: 8 * 60 + 0, fin: 10 * 60 + 0 },
-            { materia: 'Álgebra y Geometría Analítica', carrera: 'Ingeniería Electrónica', profesor: 'FERNÁNDEZ Perla Daniela / LÓPEZ Ernesto', inicio: 10 * 60 + 0, fin: 13 * 60 + 0 },
-            { materia: 'Sistemas de Control', carrera: 'Ingeniería Electrónica', profesor: 'CERALLO Pablo', inicio: 18 * 60 + 0, fin: 21 * 60 + 0 }
+            { materia: 'Álgebra y Geometría Analítica', carrera: 'Ingeniería Electrónica', profesor: 'Docente de ejemplo', inicio: 8 * 60 + 15, fin: 10 * 60 + 15 },
+            { materia: 'Álgebra y Geometría Analítica', carrera: 'Ingeniería Electrónica', profesor: 'Docente de ejemplo', inicio: 10 * 60 + 15, fin: 13 * 60 + 15 },
+            { materia: 'Sistemas de Control', carrera: 'Ingeniería Electrónica', profesor: 'Docente de ejemplo', inicio: 18 * 60 + 15, fin: 21 * 60 + 15 }
         ]
     },
     '07': {
         miércoles: [
-            { materia: 'Análisis Matemático I', carrera: 'Ingeniería Electrónica', profesor: 'PÍNGARO Gonzalo / SUELVES Nadia', inicio: 8 * 60 + 0, fin: 10 * 60 + 0 },
-            { materia: 'Análisis Matemático I', carrera: 'Ingeniería Electrónica', profesor: 'PÍNGARO Gonzalo / SUELVES Nadia', inicio: 10 * 60 + 0, fin: 13 * 60 + 0 }
+            { materia: 'Análisis Matemático I', carrera: 'Ingeniería Electrónica', profesor: 'Docente de ejemplo', inicio: 8 * 60 + 15, fin: 10 * 60 + 15 },
+            { materia: 'Análisis Matemático I', carrera: 'Ingeniería Electrónica', profesor: 'Docente de ejemplo', inicio: 10 * 60 + 15, fin: 13 * 60 + 15 }
         ],
         viernes: [
-            { materia: 'Análisis Matemático I', carrera: 'Ingeniería Electrónica', profesor: 'PÍNGARO Gonzalo / SUELVES Nadia', inicio: 8 * 60 + 0, fin: 10 * 60 + 0 },
-            { materia: 'Análisis Matemático I', carrera: 'Ingeniería Electrónica', profesor: 'PÍNGARO Gonzalo / SUELVES Nadia', inicio: 10 * 60 + 0, fin: 13 * 60 + 0 }
+            { materia: 'Análisis Matemático I', carrera: 'Ingeniería Electrónica', profesor: 'Docente de ejemplo', inicio: 8 * 60 + 15, fin: 10 * 60 + 15 },
+            { materia: 'Análisis Matemático I', carrera: 'Ingeniería Electrónica', profesor: 'Docente de ejemplo', inicio: 10 * 60 + 15, fin: 13 * 60 + 15 }
         ],
         sábado: [
-            { materia: 'Bioestadística', carrera: 'Licenciatura en Biotecnología', profesor: 'AGUILERA Pablo / RIVAS Juan Gabriel', inicio: 9 * 60 + 0, fin: 13 * 60 + 0 }
+            { materia: 'Bioestadística', carrera: 'Licenciatura en Biotecnología', profesor: 'Docente de ejemplo', inicio: 9 * 60 + 15, fin: 13 * 60 + 15 }
         ]
     },
     '08': {
         martes: [
-            { materia: 'Introducción al Cálculo', carrera: 'Licenciatura en Biotecnología', profesor: 'BRAVO Silvio Damián / SALDIVIA Diego', inicio: 10 * 60 + 0, fin: 13 * 60 + 0 }
+            { materia: 'Introducción al Cálculo', carrera: 'Licenciatura en Biotecnología', profesor: 'Docente de ejemplo', inicio: 10 * 60 + 15, fin: 13 * 60 + 15 }
         ],
         miércoles: [
-            { materia: 'Seminario Gestión de Calidad y Aspectos Regulatorios', carrera: 'Licenciatura en Biotecnología', profesor: 'a designar / a designar', inicio: 17 * 60 + 0, fin: 21 * 60 + 0 }
+            { materia: 'Seminario Gestión de Calidad y Aspectos Regulatorios', carrera: 'Licenciatura en Biotecnología', profesor: 'Docente de ejemplo', inicio: 17 * 60 + 15, fin: 21 * 60 + 15 }
         ],
         viernes: [
-            { materia: 'Desarrollo Sustentable y Derechos Humanos', carrera: 'Licenciatura en Gestión Ambiental', profesor: 'MAIORANA Miguel', inicio: 9 * 60 + 0, fin: 14 * 60 + 0 },
-            { materia: 'Introducción al Cálculo', carrera: 'Licenciatura en Biotecnología', profesor: 'BRAVO Silvio Damián / SALDIVIA Diego', inicio: 10 * 60 + 0, fin: 12 * 60 + 0 },
-            { materia: 'Modelos de Desarrollo y Ambiente', carrera: 'Licenciatura en Gestión Ambiental', profesor: 'a designar', inicio: 18 * 60 + 0, fin: 22 * 60 + 0 }
+            { materia: 'Desarrollo Sustentable y Derechos Humanos', carrera: 'Licenciatura en Gestión Ambiental', profesor: 'Docente de ejemplo', inicio: 9 * 60 + 15, fin: 14 * 60 + 15 },
+            { materia: 'Introducción al Cálculo', carrera: 'Licenciatura en Biotecnología', profesor: 'Docente de ejemplo', inicio: 10 * 60 + 15, fin: 12 * 60 + 15 },
+            { materia: 'Modelos de Desarrollo y Ambiente', carrera: 'Licenciatura en Gestión Ambiental', profesor: 'Docente de ejemplo', inicio: 18 * 60 + 15, fin: 22 * 60 + 15 }
         ]
     },
     '09': {
         miércoles: [
-            { materia: 'Biotecnología I', carrera: 'Licenciatura en Biotecnología', profesor: 'a designar / ORQUEDA Andrés', inicio: 18 * 60 + 0, fin: 21 * 60 + 0 }
+            { materia: 'Biotecnología I', carrera: 'Licenciatura en Biotecnología', profesor: 'Docente de ejemplo', inicio: 18 * 60 + 15, fin: 21 * 60 + 15 }
         ],
         jueves: [
-            { materia: 'Biotecnología I', carrera: 'Licenciatura en Biotecnología', profesor: 'a designar / ORQUEDA Andrés', inicio: 17 * 60 + 0, fin: 21 * 60 + 0 }
+            { materia: 'Biotecnología I', carrera: 'Licenciatura en Biotecnología', profesor: 'Docente de ejemplo', inicio: 17 * 60 + 15, fin: 21 * 60 + 15 }
         ]
     },
     '11': {
         martes: [
-            { materia: 'Análisis Matemático', carrera: 'Licenciatura en Biotecnología', profesor: 'GOMEZ Juan Pablo Florentino / FERNANDEZ Ana Laura', inicio: 10 * 60 + 0, fin: 13 * 60 + 0 }
+            { materia: 'Análisis Matemático', carrera: 'Licenciatura en Biotecnología', profesor: 'Docente de ejemplo', inicio: 10 * 60 + 15, fin: 13 * 60 + 15 }
         ],
         jueves: [
-            { materia: 'Análisis Matemático', carrera: 'Licenciatura en Biotecnología', profesor: 'GOMEZ Juan Pablo Florentino / FERNANDEZ Ana Laura', inicio: 11 * 60 + 0, fin: 14 * 60 + 0 }
+            { materia: 'Análisis Matemático', carrera: 'Licenciatura en Biotecnología', profesor: 'Docente de ejemplo', inicio: 11 * 60 + 15, fin: 14 * 60 + 15 }
         ]
     },
     '12': {
         martes: [
-            { materia: 'Redes IIA', carrera: 'Ingeniería Electrónica', profesor: 'a designar', inicio: 18 * 60 + 0, fin: 23 * 60 + 0 }
+            { materia: 'Redes IIA', carrera: 'Ingeniería Electrónica', profesor: 'Docente de ejemplo', inicio: 17 * 60 + 45, fin: 22 * 60 + 45 }
         ]
     },
     '13': {
         martes: [
-            { materia: 'Taller de Arquitectura VI', carrera: 'Arquitectura', profesor: 'INDART Rafael', inicio: 9 * 60 + 0, fin: 13 * 60 + 0 },
-            { materia: 'Taller de Arquitectura VI', carrera: 'Arquitectura', profesor: 'LÁZARO Juan Pablo / GELVES David', inicio: 18 * 60 + 0, fin: 22 * 60 + 0 }
+            { materia: 'Taller de Arquitectura VI', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 9 * 60 + 15, fin: 13 * 60 + 15 },
+            { materia: 'Taller de Arquitectura VI', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 18 * 60 + 15, fin: 22 * 60 + 15 }
         ],
         jueves: [
-            { materia: 'Dirección, Gestión y Ejecución de Obras', carrera: 'Arquitectura', profesor: 'a designar / a designar', inicio: 18 * 60 + 0, fin: 23 * 60 + 0 }
+            { materia: 'Dirección, Gestión y Ejecución de Obras', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 17 * 60 + 45, fin: 22 * 60 + 45 }
         ],
         viernes: [
-            { materia: 'Taller de Arquitectura VI', carrera: 'Arquitectura', profesor: 'INDART Rafael', inicio: 9 * 60 + 0, fin: 12 * 60 + 0 },
-            { materia: 'Taller de Arquitectura VI', carrera: 'Arquitectura', profesor: 'LÁZARO Juan Pablo / GELVES David', inicio: 18 * 60 + 0, fin: 21 * 60 + 0 }
+            { materia: 'Taller de Arquitectura VI', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 9 * 60 + 15, fin: 12 * 60 + 15 },
+            { materia: 'Taller de Arquitectura VI', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 18 * 60 + 15, fin: 21 * 60 + 15 }
         ]
     },
     '14': {
         jueves: [
-            { materia: 'Evaluación de Impacto Ambiental II', carrera: 'Licenciatura en Gestión Ambiental', profesor: 'ABRUZZINI Marina', inicio: 18 * 60 + 0, fin: 22 * 60 + 0 }
+            { materia: 'Evaluación de Impacto Ambiental II', carrera: 'Licenciatura en Gestión Ambiental', profesor: 'Docente de ejemplo', inicio: 18 * 60 + 15, fin: 22 * 60 + 15 }
         ]
     },
     '16': {
         lunes: [
-            { materia: 'Gestión de Recursos Naturales', carrera: 'Licenciatura en Gestión Ambiental', profesor: 'ALVAREZ Marcela Alejandra', inicio: 17 * 60 + 0, fin: 22 * 60 + 0 }
+            { materia: 'Gestión de Recursos Naturales', carrera: 'Licenciatura en Gestión Ambiental', profesor: 'Docente de ejemplo', inicio: 17 * 60 + 15, fin: 22 * 60 + 15 }
         ]
     },
     '18': {
         lunes: [
-            { materia: 'Morfología II', carrera: 'Arquitectura', profesor: 'a designar / TINTO Nicolas', inicio: 18 * 60 + 0, fin: 23 * 60 + 0 }
+            { materia: 'Morfología II', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 17 * 60 + 45, fin: 22 * 60 + 45 }
         ],
         martes: [
-            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'BERTOLI Sandra / DÍAZ Mariana Paula', inicio: 9 * 60 + 0, fin: 13 * 60 + 0 },
-            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'CONTRERAS IRIARTE Julián / AGUIN Luciano', inicio: 18 * 60 + 0, fin: 22 * 60 + 0 }
+            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 9 * 60 + 15, fin: 13 * 60 + 15 },
+            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 18 * 60 + 15, fin: 22 * 60 + 15 }
         ],
         miércoles: [
-            { materia: 'Estructuras I', carrera: 'Arquitectura', profesor: 'a designar / PERUZZO Fernando', inicio: 8 * 60 + 0, fin: 13 * 60 + 0 },
-            { materia: 'Estructuras I', carrera: 'Arquitectura', profesor: 'a designar / PERUZZO Fernando', inicio: 18 * 60 + 0, fin: 23 * 60 + 0 }
+            { materia: 'Estructuras I', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 8 * 60 + 15, fin: 13 * 60 + 15 },
+            { materia: 'Estructuras I', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 17 * 60 + 45, fin: 22 * 60 + 45 }
         ],
         jueves: [
-            { materia: 'Tecnología', carrera: 'Arquitectura', profesor: 'PUGA Silvia / GELVES David', inicio: 8 * 60 + 0, fin: 13 * 60 + 0 },
-            { materia: 'Matemática I', carrera: 'Arquitectura', profesor: 'a designar / TOLEDO Christian', inicio: 13 * 60 + 30, fin: 17 * 60 + 30 },
-            { materia: 'Tecnología', carrera: 'Arquitectura', profesor: 'CAROL Eduardo / a designar', inicio: 18 * 60 + 0, fin: 23 * 60 + 0 }
+            { materia: 'Tecnología', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 8 * 60 + 15, fin: 13 * 60 + 15 },
+            { materia: 'Matemática I', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 13 * 60 + 45, fin: 17 * 60 + 45 },
+            { materia: 'Tecnología', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 17 * 60 + 45, fin: 22 * 60 + 45 }
         ],
         viernes: [
-            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'BERTOLI Sandra / DÍAZ Mariana Paula', inicio: 9 * 60 + 0, fin: 12 * 60 + 0 },
-            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'CONTRERAS IRIARTE Julián / AGUIN Luciano', inicio: 18 * 60 + 0, fin: 21 * 60 + 0 }
+            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 9 * 60 + 15, fin: 12 * 60 + 15 },
+            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 18 * 60 + 15, fin: 21 * 60 + 15 }
         ],
         sábado: [
-            { materia: 'Seminario de Tasaciones, Peritajes y Valuaciones', carrera: 'Arquitectura', profesor: 'a designar (Primer módulo)', inicio: 9 * 60 + 0, fin: 13 * 60 + 0 }
+            { materia: 'Seminario de Tasaciones, Peritajes y Valuaciones', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 9 * 60 + 15, fin: 13 * 60 + 15 }
         ]
     },
     '19': {
         lunes: [
-            { materia: 'Morfología II', carrera: 'Arquitectura', profesor: 'SANJURJO Moira / PEREZ ORONA Marcelo', inicio: 18 * 60 + 0, fin: 23 * 60 + 0 }
+            { materia: 'Morfología II', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 17 * 60 + 45, fin: 22 * 60 + 45 }
         ],
         martes: [
-            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'PEROTTI Andrea / NORTE María Laura', inicio: 9 * 60 + 0, fin: 13 * 60 + 0 },
-            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'BERTOLI Sandra', inicio: 18 * 60 + 0, fin: 22 * 60 + 0 }
+            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 9 * 60 + 15, fin: 13 * 60 + 15 },
+            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 18 * 60 + 15, fin: 22 * 60 + 15 }
         ],
         miércoles: [
-            { materia: 'Estructuras I', carrera: 'Arquitectura', profesor: 'AMERIO Liliana / A DESIGNAR', inicio: 8 * 60 + 0, fin: 13 * 60 + 0 }
+            { materia: 'Estructuras I', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 8 * 60 + 15, fin: 13 * 60 + 15 }
         ],
         jueves: [
-            { materia: 'Tecnología', carrera: 'Arquitectura', profesor: 'BACANS Mariano / a designar', inicio: 8 * 60 + 0, fin: 13 * 60 + 0 },
-            { materia: 'Matemática I', carrera: 'Arquitectura', profesor: 'a designar / TOLEDO Christian', inicio: 13 * 60 + 30, fin: 17 * 60 + 30 },
-            { materia: 'Tecnología', carrera: 'Arquitectura', profesor: 'GELVES David / a designar', inicio: 18 * 60 + 0, fin: 23 * 60 + 0 }
+            { materia: 'Tecnología', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 8 * 60 + 15, fin: 13 * 60 + 15 },
+            { materia: 'Matemática I', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 13 * 60 + 45, fin: 17 * 60 + 45 },
+            { materia: 'Tecnología', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 17 * 60 + 45, fin: 22 * 60 + 45 }
         ],
         viernes: [
-            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'PEROTTI Andrea / NORTE María Laura', inicio: 9 * 60 + 0, fin: 12 * 60 + 0 },
-            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'BERTOLI Sandra', inicio: 18 * 60 + 0, fin: 21 * 60 + 0 }
+            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 9 * 60 + 15, fin: 12 * 60 + 15 },
+            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 18 * 60 + 15, fin: 21 * 60 + 15 }
         ],
         sábado: [
-            { materia: 'Hábitat: Abordaje Urbano Habitacional', carrera: 'Arquitectura', profesor: 'GARCIA COLINAS Mariano', inicio: 9 * 60 + 0, fin: 12 * 60 + 0 }
+            { materia: 'Hábitat: Abordaje Urbano Habitacional', carrera: 'Arquitectura', profesor: 'Docente de ejemplo', inicio: 9 * 60 + 15, fin: 12 * 60 + 15 }
         ]
     }
         };
 
         const aulasGrid = document.querySelector('#aulas-grid');
+        const botonSelectorVista = document.querySelector('#materias');
+        const iconoSelectorVista = botonSelectorVista?.querySelector('.selector-vista');
         const vistaAulas = document.querySelector('#vista-aulas');
         const vistaHorarios = document.querySelector('#vista-horarios');
         const etiquetasHorarios = document.querySelector('#etiquetas-horarios');
@@ -259,6 +261,23 @@ uicons-regular-rounded.css'>
         const zonaHoraria = 'America/Argentina/Buenos_Aires';
         let aulaSeleccionada = null;
         const keyMateriasNotificadas = 'materias-notificadas';
+
+        botonSelectorVista?.addEventListener('click', () => {
+            const pasarALista = aulasGrid.classList.contains('vista-cuadricula');
+            aulasGrid.classList.toggle('vista-cuadricula', !pasarALista);
+            aulasGrid.classList.toggle('vista-lista', pasarALista);
+
+            const etiqueta = pasarALista
+                ? 'Cambiar a vista de cuadrícula'
+                : 'Cambiar a vista de lista';
+            if (iconoSelectorVista) {
+                iconoSelectorVista.src = pasarALista
+                    ? 'iconos/BotonGrillaNuevo (2).svg'
+                    : 'iconos/icono blanco (6).svg';
+            }
+            botonSelectorVista.setAttribute('aria-label', etiqueta);
+            botonSelectorVista.title = etiqueta;
+        });
 
         function obtenerMateriasNotificadas() {
             try {
