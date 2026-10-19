@@ -2,15 +2,19 @@
     color: #36127B !important;
 }
 
-#logo{
+#logo img{
    /*margin: 3rem;*/
     width: 50%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
 
+}
+
+.inicioVisitante{
+    text-decoration: none;
+    color: white;
 }
 
 header{
@@ -19,7 +23,7 @@ header{
     justify-content: center;
 }
 
-#iniciIndex{
+#inicioIndex{
     background-color: #253c6d !important;
 }
 
@@ -665,6 +669,11 @@ nav i{
     margin: 0;
     padding: 0.75rem;
     color: #666;
+}
+
+
+#calendar{
+    margin: 3rem;
 }
 
 /* Evita el movimiento si la persona lo redujo en la configuración del sistema. */
