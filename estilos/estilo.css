@@ -3,24 +3,46 @@
 }
 
 #logo{
-    margin: 3rem;
+   /*margin: 3rem;*/
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#iniciIndex{
+    background-color: #253c6d !important;
 }
 
 h1{
     justify-content: center;
     align-content: center;
     text-align: center;
+    color: #F2842F;
 }
 
 #inicio{
     display: flex;
     flex-direction: column;
     margin-inline: 3rem;
+    background-color: #253C6D;
 }
 
 input{
     border: solid 2px #36127B;
 
+}
+label{
+    color: white;
 }
 
 #daractI{
@@ -33,7 +55,7 @@ input{
     margin: 2rem;
     padding: 1rem;
     border-radius: 10px;
-    background-color: #253c6d;
+    background-color: #F2842F;
     text-decoration: none;
     color: white;
     align-items: center;
