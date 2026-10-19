@@ -12,6 +12,17 @@ h1{
     text-align: center;
 }
 
+#inicio{
+    display: flex;
+    flex-direction: column;
+    margin-inline: 3rem;
+}
+
+input{
+    border: solid 2px #36127B;
+
+}
+
 #daractI{
     width: 70%;
     margin: 3rem;
@@ -21,6 +32,7 @@ h1{
     display: flex;
     margin: 2rem;
     padding: 1rem;
+    border-radius: 10px;
     background-color: #253c6d;
     text-decoration: none;
     color: white;
@@ -29,6 +41,21 @@ h1{
     text-align: center;
     align-content: center;
 
+}
+
+.inicioVisitante{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.administrador{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin: solid 2px black;
+    margin-bottom: 2rem;
 }
 
 
@@ -41,7 +68,7 @@ body{
 }
 
 body.vista-aulas {
-    background-image: url("/img/daract.jpg");
+    background-image: url("../img/daract.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: top center;
