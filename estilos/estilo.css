@@ -2,6 +2,35 @@
     color: #36127B !important;
 }
 
+#logo{
+    margin: 3rem;
+}
+
+h1{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+#daractI{
+    width: 70%;
+    margin: 3rem;
+}
+
+#acceder{
+    display: flex;
+    margin: 2rem;
+    padding: 1rem;
+    background-color: #253c6d;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+
+}
+
 
 body{
     padding: 0;
@@ -20,6 +49,64 @@ body.vista-aulas {
 
 body.vista-horarios {
     background: #ffffff;
+}
+
+/* Reserva espacio para que la barra fija no tape el contenido inferior */
+main.container-fluid{
+    padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
+}
+
+/* Barra de navegación inferior, visible tanto en aulas como en horarios */
+.navbar-inferior{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 0.55rem 1rem calc(0.55rem + env(safe-area-inset-bottom));
+    border-top: 1px solid #dedee5;
+    background: #36127B;
+    box-shadow: 0 -3px 12px rgba(37, 60, 109, 0.08);
+}
+
+.navbar-inferior .opcion-navbar{
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    padding: 0.15rem;
+    border: 0;
+    background: transparent;
+    color: white;
+    font: inherit;
+    font-size: 0.7rem;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar-inferior .opcion-navbar img,
+.navbar-inferior .opcion-navbar i{
+    display: block;
+    width: 1.4rem;
+    height: 1.4rem;
+    object-fit: contain;
+    color: #253c6d;
+    font-size: 1.35rem;
+    line-height: 1.4rem;
+}
+
+.navbar-inferior .opcion-navbar[aria-current="page"]{
+    color: #f2842f;
+    font-weight: 600;
+}
+
+.navbar-inferior .opcion-navbar:focus-visible{
+    outline: 2px solid #36127B;
+    outline-offset: 2px;
 }
 
 .imagen{
@@ -88,12 +175,13 @@ nav i{
 
 .btn-filtro{
     display: inline-flex;
+    font-size: 10px;
     align-items: center;
     border: solid 2px #1D71B8;
     border-radius: 10px;
     background-color: white;
     color: #1D71B8;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .btn-filtro:hover{
