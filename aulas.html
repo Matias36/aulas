@@ -33,10 +33,9 @@ uicons-regular-rounded.css'>
             <!-- Controles de filtro: Todos / Disponibles / Empezadas -->
             <div id="filtro-aulas" class="filtro-aulas">
                 <button type="button" class="btn-filtro" data-filtro="all">Todas</button>
-                <button type="button" class="btn-filtro" data-filtro="disponibles">Disponibles</button>
-                <button type="button" class="btn-filtro" data-filtro="empezadas">Empezadas</button>
+                <button type="button" class="btn-filtro" data-filtro="disponibles">Disponibles<i class="fi fi-ss-circle-small disponibles" aria-hidden="false"></i></button>
+                <button type="button" class="btn-filtro" data-filtro="empezadas">Empezadas<i class="fi fi-ss-circle-small ocupado" aria-hidden="false"></i></button>
             </div>
-        <h2>Planta Baja</h2>
         <section id="vista-aulas" class="vista">
 
             <div id="aulas-grid" class="aulas-grid"></div>
@@ -45,10 +44,18 @@ uicons-regular-rounded.css'>
         <section id="vista-horarios" class="vista" hidden>
             <button id="volver-aulas" class="volver-aulas" type="button">
                 <i class="fi fi-rr-angle-left violeta" aria-hidden="true"></i>
-                Volver a las aulas
+                <p>Volver a las aulas</p>
             </button>
-            <h1 id="titulo-horarios" class="titulo-horarios"></h1>
-            <p class="ayuda-horarios">Horarios de 08:00 a 22:00</p>
+            <div class="horarios-header">
+                <div>
+                    <h1 id="titulo-horarios" class="titulo-horarios"></h1>
+                    <p class="ayuda-horarios">Horarios de 08:00 a 23:00</p>
+                </div>
+                <button id="campana-header" class="campana-header" type="button" aria-label="Materias con notificación">
+                    <img src="iconos/icono blanco (9).svg" alt="">
+                    <span class="campana-badge">0</span>
+                </button>
+            </div>
             <div class="grilla-horarios">
                 <div id="etiquetas-horarios" class="etiquetas-horarios" aria-hidden="true"></div>
                 <div id="pista-horarios" class="pista-horarios"></div>
@@ -56,19 +63,172 @@ uicons-regular-rounded.css'>
         </section>
     </main>
     <script>
-        const aulas = ['01', '02', '03', '04', '05', '06', '07', '08', '09'];
+        const aulas = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19'];
         // Ahora los horarios se guardan en minutos totales desde las 00:00.
         // Ejemplo: 8:30 = 8*60 + 30 = 510; 10:15 = 10*60 + 15 = 615.
         const clasesPorAula = {
-            '01': [
-                {
-                    materia: 'Laboratorio I',
-                    carrera: 'Ingeniería Química',
-                    profesor: 'PEPE',
-                    inicio: 20 * 60 + 13,
-                    fin: 21 * 60 + 15
-                }
-            ]
+            '01': {
+        lunes: [
+            { materia: 'Química General e Inorgánica', carrera: 'Licenciatura en Biotecnología', profesor: 'CENIQUEL Marcos / a designar / a designar', inicio: 9 * 60 + 0, fin: 14 * 60 + 0 },
+            { materia: 'Introducción a la Biotecnología', carrera: 'Licenciatura en Biotecnología', profesor: 'RIVA Diego / CURRÁ Anabella', inicio: 16 * 60 + 0, fin: 20 * 60 + 0 }
+        ],
+        martes: [
+            { materia: 'Introducción a la Biotecnología', carrera: 'Licenciatura en Biotecnología', profesor: 'RIVA Diego / LOVERA Tania', inicio: 17 * 60 + 0, fin: 21 * 60 + 0 },
+            { materia: 'Introducción a la Biotecnología', carrera: 'Licenciatura en Biotecnología', profesor: 'RIVA Diego / CURRÁ Anabella', inicio: 17 * 60 + 0, fin: 21 * 60 + 0 }
+        ],
+        miércoles: [
+            { materia: 'Química General e Inorgánica', carrera: 'Licenciatura en Biotecnología', profesor: 'CENIQUEL Marcos / a designar / a designar', inicio: 9 * 60 + 0, fin: 14 * 60 + 0 },
+            { materia: 'Química General e Inorgánica', carrera: 'Licenciatura en Biotecnología', profesor: 'CENIQUEL Marcos / FERNANDEZ CORUJO Victoria / MACORETTA Christian Leandro', inicio: 9 * 60 + 0, fin: 14 * 60 + 0 }
+        ],
+        jueves: [
+            { materia: 'Química General e Inorgánica', carrera: 'Licenciatura en Biotecnología', profesor: 'CENIQUEL Marcos / FERNANDEZ CORUJO Victoria / MACORETTA Christian Leandro', inicio: 9 * 60 + 0, fin: 14 * 60 + 0 },
+            { materia: 'Introducción a la Biotecnología', carrera: 'Licenciatura en Biotecnología', profesor: 'RIVA Diego / LOVERA Tania', inicio: 17 * 60 + 0, fin: 21 * 60 + 0 }
+        ]
+    },
+    '05': {
+        lunes: [
+            { materia: 'Álgebra y Geometría Analítica', carrera: 'Ingeniería Electrónica', profesor: 'JADER Daniel / CASAL Pablo', inicio: 15 * 60 + 0, fin: 18 * 60 + 0 }
+        ],
+        viernes: [
+            { materia: 'Álgebra y Geometría Analítica', carrera: 'Ingeniería Electrónica', profesor: 'JADER Daniel / CASAL Pablo', inicio: 16 * 60 + 0, fin: 18 * 60 + 0 }
+        ]
+    },
+    '06': {
+        lunes: [
+            { materia: 'Ecología y Recursos Naturales', carrera: 'Licenciatura en Gestión Ambiental', profesor: 'CONOCHELLI Maria Belén / GARCÍA Victoria', inicio: 17 * 60 + 0, fin: 19 * 60 + 0 }
+        ],
+        miércoles: [
+            { materia: 'Álgebra y Geometría Analítica', carrera: 'Ingeniería Electrónica', profesor: 'FERNÁNDEZ Perla Daniela / LÓPEZ Ernesto', inicio: 8 * 60 + 0, fin: 10 * 60 + 0 },
+            { materia: 'Álgebra y Geometría Analítica', carrera: 'Ingeniería Electrónica', profesor: 'FERNÁNDEZ Perla Daniela / LÓPEZ Ernesto', inicio: 10 * 60 + 0, fin: 13 * 60 + 0 }
+        ],
+        jueves: [
+            { materia: 'Ecología y Recursos Naturales', carrera: 'Licenciatura en Gestión Ambiental', profesor: 'CONOCHELLI Maria Belén / GARCÍA Victoria', inicio: 17 * 60 + 0, fin: 20 * 60 + 0 }
+        ],
+        viernes: [
+            { materia: 'Álgebra y Geometría Analítica', carrera: 'Ingeniería Electrónica', profesor: 'FERNÁNDEZ Perla Daniela / LÓPEZ Ernesto', inicio: 8 * 60 + 0, fin: 10 * 60 + 0 },
+            { materia: 'Álgebra y Geometría Analítica', carrera: 'Ingeniería Electrónica', profesor: 'FERNÁNDEZ Perla Daniela / LÓPEZ Ernesto', inicio: 10 * 60 + 0, fin: 13 * 60 + 0 },
+            { materia: 'Sistemas de Control', carrera: 'Ingeniería Electrónica', profesor: 'CERALLO Pablo', inicio: 18 * 60 + 0, fin: 21 * 60 + 0 }
+        ]
+    },
+    '07': {
+        miércoles: [
+            { materia: 'Análisis Matemático I', carrera: 'Ingeniería Electrónica', profesor: 'PÍNGARO Gonzalo / SUELVES Nadia', inicio: 8 * 60 + 0, fin: 10 * 60 + 0 },
+            { materia: 'Análisis Matemático I', carrera: 'Ingeniería Electrónica', profesor: 'PÍNGARO Gonzalo / SUELVES Nadia', inicio: 10 * 60 + 0, fin: 13 * 60 + 0 }
+        ],
+        viernes: [
+            { materia: 'Análisis Matemático I', carrera: 'Ingeniería Electrónica', profesor: 'PÍNGARO Gonzalo / SUELVES Nadia', inicio: 8 * 60 + 0, fin: 10 * 60 + 0 },
+            { materia: 'Análisis Matemático I', carrera: 'Ingeniería Electrónica', profesor: 'PÍNGARO Gonzalo / SUELVES Nadia', inicio: 10 * 60 + 0, fin: 13 * 60 + 0 }
+        ],
+        sábado: [
+            { materia: 'Bioestadística', carrera: 'Licenciatura en Biotecnología', profesor: 'AGUILERA Pablo / RIVAS Juan Gabriel', inicio: 9 * 60 + 0, fin: 13 * 60 + 0 }
+        ]
+    },
+    '08': {
+        martes: [
+            { materia: 'Introducción al Cálculo', carrera: 'Licenciatura en Biotecnología', profesor: 'BRAVO Silvio Damián / SALDIVIA Diego', inicio: 10 * 60 + 0, fin: 13 * 60 + 0 }
+        ],
+        miércoles: [
+            { materia: 'Seminario Gestión de Calidad y Aspectos Regulatorios', carrera: 'Licenciatura en Biotecnología', profesor: 'a designar / a designar', inicio: 17 * 60 + 0, fin: 21 * 60 + 0 }
+        ],
+        viernes: [
+            { materia: 'Desarrollo Sustentable y Derechos Humanos', carrera: 'Licenciatura en Gestión Ambiental', profesor: 'MAIORANA Miguel', inicio: 9 * 60 + 0, fin: 14 * 60 + 0 },
+            { materia: 'Introducción al Cálculo', carrera: 'Licenciatura en Biotecnología', profesor: 'BRAVO Silvio Damián / SALDIVIA Diego', inicio: 10 * 60 + 0, fin: 12 * 60 + 0 },
+            { materia: 'Modelos de Desarrollo y Ambiente', carrera: 'Licenciatura en Gestión Ambiental', profesor: 'a designar', inicio: 18 * 60 + 0, fin: 22 * 60 + 0 }
+        ]
+    },
+    '09': {
+        miércoles: [
+            { materia: 'Biotecnología I', carrera: 'Licenciatura en Biotecnología', profesor: 'a designar / ORQUEDA Andrés', inicio: 18 * 60 + 0, fin: 21 * 60 + 0 }
+        ],
+        jueves: [
+            { materia: 'Biotecnología I', carrera: 'Licenciatura en Biotecnología', profesor: 'a designar / ORQUEDA Andrés', inicio: 17 * 60 + 0, fin: 21 * 60 + 0 }
+        ]
+    },
+    '11': {
+        martes: [
+            { materia: 'Análisis Matemático', carrera: 'Licenciatura en Biotecnología', profesor: 'GOMEZ Juan Pablo Florentino / FERNANDEZ Ana Laura', inicio: 10 * 60 + 0, fin: 13 * 60 + 0 }
+        ],
+        jueves: [
+            { materia: 'Análisis Matemático', carrera: 'Licenciatura en Biotecnología', profesor: 'GOMEZ Juan Pablo Florentino / FERNANDEZ Ana Laura', inicio: 11 * 60 + 0, fin: 14 * 60 + 0 }
+        ]
+    },
+    '12': {
+        martes: [
+            { materia: 'Redes IIA', carrera: 'Ingeniería Electrónica', profesor: 'a designar', inicio: 18 * 60 + 0, fin: 23 * 60 + 0 }
+        ]
+    },
+    '13': {
+        martes: [
+            { materia: 'Taller de Arquitectura VI', carrera: 'Arquitectura', profesor: 'INDART Rafael', inicio: 9 * 60 + 0, fin: 13 * 60 + 0 },
+            { materia: 'Taller de Arquitectura VI', carrera: 'Arquitectura', profesor: 'LÁZARO Juan Pablo / GELVES David', inicio: 18 * 60 + 0, fin: 22 * 60 + 0 }
+        ],
+        jueves: [
+            { materia: 'Dirección, Gestión y Ejecución de Obras', carrera: 'Arquitectura', profesor: 'a designar / a designar', inicio: 18 * 60 + 0, fin: 23 * 60 + 0 }
+        ],
+        viernes: [
+            { materia: 'Taller de Arquitectura VI', carrera: 'Arquitectura', profesor: 'INDART Rafael', inicio: 9 * 60 + 0, fin: 12 * 60 + 0 },
+            { materia: 'Taller de Arquitectura VI', carrera: 'Arquitectura', profesor: 'LÁZARO Juan Pablo / GELVES David', inicio: 18 * 60 + 0, fin: 21 * 60 + 0 }
+        ]
+    },
+    '14': {
+        jueves: [
+            { materia: 'Evaluación de Impacto Ambiental II', carrera: 'Licenciatura en Gestión Ambiental', profesor: 'ABRUZZINI Marina', inicio: 18 * 60 + 0, fin: 22 * 60 + 0 }
+        ]
+    },
+    '16': {
+        lunes: [
+            { materia: 'Gestión de Recursos Naturales', carrera: 'Licenciatura en Gestión Ambiental', profesor: 'ALVAREZ Marcela Alejandra', inicio: 17 * 60 + 0, fin: 22 * 60 + 0 }
+        ]
+    },
+    '18': {
+        lunes: [
+            { materia: 'Morfología II', carrera: 'Arquitectura', profesor: 'a designar / TINTO Nicolas', inicio: 18 * 60 + 0, fin: 23 * 60 + 0 }
+        ],
+        martes: [
+            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'BERTOLI Sandra / DÍAZ Mariana Paula', inicio: 9 * 60 + 0, fin: 13 * 60 + 0 },
+            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'CONTRERAS IRIARTE Julián / AGUIN Luciano', inicio: 18 * 60 + 0, fin: 22 * 60 + 0 }
+        ],
+        miércoles: [
+            { materia: 'Estructuras I', carrera: 'Arquitectura', profesor: 'a designar / PERUZZO Fernando', inicio: 8 * 60 + 0, fin: 13 * 60 + 0 },
+            { materia: 'Estructuras I', carrera: 'Arquitectura', profesor: 'a designar / PERUZZO Fernando', inicio: 18 * 60 + 0, fin: 23 * 60 + 0 }
+        ],
+        jueves: [
+            { materia: 'Tecnología', carrera: 'Arquitectura', profesor: 'PUGA Silvia / GELVES David', inicio: 8 * 60 + 0, fin: 13 * 60 + 0 },
+            { materia: 'Matemática I', carrera: 'Arquitectura', profesor: 'a designar / TOLEDO Christian', inicio: 13 * 60 + 30, fin: 17 * 60 + 30 },
+            { materia: 'Tecnología', carrera: 'Arquitectura', profesor: 'CAROL Eduardo / a designar', inicio: 18 * 60 + 0, fin: 23 * 60 + 0 }
+        ],
+        viernes: [
+            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'BERTOLI Sandra / DÍAZ Mariana Paula', inicio: 9 * 60 + 0, fin: 12 * 60 + 0 },
+            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'CONTRERAS IRIARTE Julián / AGUIN Luciano', inicio: 18 * 60 + 0, fin: 21 * 60 + 0 }
+        ],
+        sábado: [
+            { materia: 'Seminario de Tasaciones, Peritajes y Valuaciones', carrera: 'Arquitectura', profesor: 'a designar (Primer módulo)', inicio: 9 * 60 + 0, fin: 13 * 60 + 0 }
+        ]
+    },
+    '19': {
+        lunes: [
+            { materia: 'Morfología II', carrera: 'Arquitectura', profesor: 'SANJURJO Moira / PEREZ ORONA Marcelo', inicio: 18 * 60 + 0, fin: 23 * 60 + 0 }
+        ],
+        martes: [
+            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'PEROTTI Andrea / NORTE María Laura', inicio: 9 * 60 + 0, fin: 13 * 60 + 0 },
+            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'BERTOLI Sandra', inicio: 18 * 60 + 0, fin: 22 * 60 + 0 }
+        ],
+        miércoles: [
+            { materia: 'Estructuras I', carrera: 'Arquitectura', profesor: 'AMERIO Liliana / A DESIGNAR', inicio: 8 * 60 + 0, fin: 13 * 60 + 0 }
+        ],
+        jueves: [
+            { materia: 'Tecnología', carrera: 'Arquitectura', profesor: 'BACANS Mariano / a designar', inicio: 8 * 60 + 0, fin: 13 * 60 + 0 },
+            { materia: 'Matemática I', carrera: 'Arquitectura', profesor: 'a designar / TOLEDO Christian', inicio: 13 * 60 + 30, fin: 17 * 60 + 30 },
+            { materia: 'Tecnología', carrera: 'Arquitectura', profesor: 'GELVES David / a designar', inicio: 18 * 60 + 0, fin: 23 * 60 + 0 }
+        ],
+        viernes: [
+            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'PEROTTI Andrea / NORTE María Laura', inicio: 9 * 60 + 0, fin: 12 * 60 + 0 },
+            { materia: 'Taller de Arquitectura II', carrera: 'Arquitectura', profesor: 'BERTOLI Sandra', inicio: 18 * 60 + 0, fin: 21 * 60 + 0 }
+        ],
+        sábado: [
+            { materia: 'Hábitat: Abordaje Urbano Habitacional', carrera: 'Arquitectura', profesor: 'GARCIA COLINAS Mariano', inicio: 9 * 60 + 0, fin: 12 * 60 + 0 }
+        ]
+    }
         };
 
         const aulasGrid = document.querySelector('#aulas-grid');
@@ -77,12 +237,86 @@ uicons-regular-rounded.css'>
         const etiquetasHorarios = document.querySelector('#etiquetas-horarios');
         const pistaHorarios = document.querySelector('#pista-horarios');
         const tituloHorarios = document.querySelector('#titulo-horarios');
+        const campanaHeader = document.querySelector('#campana-header');
         const relojArgentina = document.querySelector('#reloj-argentina');
+        const headerImagen = document.querySelector('.imagen');
+        const tituloPlanta = document.querySelector('#caja-aulas h2');
         const zonaHoraria = 'America/Argentina/Buenos_Aires';
         let aulaSeleccionada = null;
+        const keyMateriasNotificadas = 'materias-notificadas';
+
+        function obtenerMateriasNotificadas() {
+            try {
+                const guardadas = JSON.parse(localStorage.getItem(keyMateriasNotificadas) || '[]');
+                return Array.isArray(guardadas) ? guardadas : [];
+            } catch {
+                return [];
+            }
+        }
+
+        function guardarMateriasNotificadas(materias) {
+            localStorage.setItem(keyMateriasNotificadas, JSON.stringify(materias));
+        }
+
+        function normalizarMateria(materia) {
+            return String(materia || '').trim().toLowerCase();
+        }
+
+        function actualizarCampanaHeader() {
+            if (!campanaHeader) return;
+
+            const materias = obtenerMateriasNotificadas();
+            const badge = campanaHeader.querySelector('.campana-badge');
+
+            campanaHeader.classList.toggle('activa', materias.length > 0);
+            if (badge) badge.textContent = String(materias.length);
+            campanaHeader.title = materias.length > 0
+                ? `${materias.length} materia${materias.length === 1 ? '' : 's'} con notificación`
+                : 'Sin notificaciones activas';
+        }
+
+        function materiaTieneNotificacion(materia) {
+            const materias = obtenerMateriasNotificadas();
+            return materias.some((item) => normalizarMateria(item) === normalizarMateria(materia));
+        }
+
+        function alternarNotificacionMateria(materia) {
+            const materias = obtenerMateriasNotificadas();
+            const clave = normalizarMateria(materia);
+            const siguiente = materias.some((item) => normalizarMateria(item) === clave)
+                ? materias.filter((item) => normalizarMateria(item) !== clave)
+                : [...materias, materia.trim()];
+
+            guardarMateriasNotificadas(siguiente);
+            actualizarCampanaHeader();
+        }
+
+        function obtenerDiaActual() {
+            const nombreDia = new Intl.DateTimeFormat('es-AR', {
+                timeZone: zonaHoraria,
+                weekday: 'long'
+            }).format(new Date()).toLowerCase();
+
+            const mapaDias = {
+                'lunes': 'lunes',
+                'martes': 'martes',
+                'miércoles': 'miercoles',
+                'jueves': 'jueves',
+                'viernes': 'viernes',
+                'sábado': 'sabado',
+                'domingo': 'lunes'
+            };
+
+            return mapaDias[nombreDia] || 'lunes';
+        }
+
+        function obtenerClasesDeAula(numero) {
+            const diaActual = obtenerDiaActual();
+            return clasesPorAula[numero]?.[diaActual] || [];
+        }
 
         aulas.forEach((numero) => {
-            const clases = clasesPorAula[numero] || [];
+            const clases = obtenerClasesDeAula(numero);
             const tarjeta = document.createElement('button');
             tarjeta.type = 'button';
             tarjeta.className = 'card aula-card';
@@ -102,8 +336,8 @@ uicons-regular-rounded.css'>
             aulasGrid.appendChild(tarjeta);
         });
 
-        // Se muestran las etiquetas de horario desde 08:00 hasta 21:00 para mantener la vista legible.
-        for (let hora = 8; hora <= 22; hora += 1) {
+        // Se muestran las etiquetas de horario desde 08:00 hasta 23:00 para mantener la vista legible.
+        for (let hora = 8; hora <= 23; hora += 1) {
             const etiqueta = document.createElement('div');
             etiqueta.className = 'etiqueta-horario';
             etiqueta.textContent = formatearHora(hora * 60);
@@ -119,7 +353,7 @@ uicons-regular-rounded.css'>
             const minutos = typeof minutosActualesParam === 'number' ? minutosActualesParam : obtenerMinutosArgentina();
             for (const tarjeta of aulasGrid.querySelectorAll('.aula-card')) {
                 const numero = tarjeta.dataset.aula;
-                const clases = clasesPorAula[numero] || [];
+                const clases = obtenerClasesDeAula(numero);
                 const claseActiva = clases.find((clase) => estadoDeClase(clase, minutos) === 'en-curso');
                 const clasePronta = clases.find((clase) => estadoDeClase(clase, minutos) === 'pronta');
                 const estado = claseActiva
@@ -201,7 +435,7 @@ uicons-regular-rounded.css'>
 
             for (const tarjeta of aulasGrid.querySelectorAll('.aula-card')) {
                 const numero = tarjeta.dataset.aula;
-                const clases = clasesPorAula[numero] || [];
+                const clases = obtenerClasesDeAula(numero);
                 const claseActiva = clases.find(
                     (clase) => estadoDeClase(clase, minutosActuales) === 'en-curso'
                 );
@@ -248,25 +482,40 @@ uicons-regular-rounded.css'>
         }
 
         function renderizarClases(numero, minutosActuales) {
-            const clases = clasesPorAula[numero] || [];
+            const clases = obtenerClasesDeAula(numero);
             pistaHorarios.replaceChildren();
 
             for (const clase of clases) {
                 const bloque = document.createElement('article');
                 const estado = estadoDeClase(clase, minutosActuales);
+                const tieneNotificacion = materiaTieneNotificacion(clase.materia);
                 // Esto calcula la fila y la altura del bloque usando horas, manteniendo la grilla legible.
                 const inicioFila = Math.max(1, Math.floor((clase.inicio - 8 * 60) / 60) + 1);
                 const duracionHoras = Math.max(1, Math.ceil((clase.fin - clase.inicio) / 60));
 
                 bloque.className = `bloque-clase ${estado === 'en-curso' ? 'clase-en-curso' : estado === 'pronta' ? 'clase-pronta' : ''}`;
+                bloque.dataset.materia = clase.materia;
                 bloque.style.gridRow = `${inicioFila} / span ${duracionHoras}`;
                 bloque.innerHTML = `
+                    <button class="campana-notif ${tieneNotificacion ? 'activa' : ''}" type="button" aria-label="${tieneNotificacion ? 'Quitar notificación' : 'Activar notificación'} para ${clase.materia}" aria-pressed="${tieneNotificacion}">
+                        <img src="iconos/icono azul (8).svg" alt="">
+                    </button>
                     <strong>${clase.materia}</strong>
                     <span>${formatearHora(clase.inicio)} a ${formatearHora(clase.fin)}</span>
                     <span>Profesor: ${clase.profesor}</span>
                     ${estado === 'pronta' ? '<span>Empieza pronto</span>' : ''}
                     <span class="carrera-clase">${clase.carrera}</span>
                 `;
+
+                const botonCampana = bloque.querySelector('.campana-notif');
+                if (botonCampana) {
+                    botonCampana.addEventListener('click', (event) => {
+                        event.stopPropagation();
+                        alternarNotificacionMateria(clase.materia);
+                        renderizarClases(numero, obtenerMinutosArgentina());
+                    });
+                }
+
                 pistaHorarios.appendChild(bloque);
             }
 
@@ -290,9 +539,12 @@ uicons-regular-rounded.css'>
         function renderizarVistaHorarios(numero) {
             aulaSeleccionada = numero;
             tituloHorarios.textContent = `Aula ${numero}`;
+            document.body.classList.remove('vista-aulas');
+            document.body.classList.add('vista-horarios');
             document.getElementById('filtro-aulas').hidden = true;
-            document.querySelector('#caja-aulas h2').hidden = true;
+            if (tituloPlanta) tituloPlanta.hidden = true;
             document.getElementById('reloj-argentina').hidden = true;
+            headerImagen.hidden = true;
             vistaAulas.hidden = true;
             vistaHorarios.hidden = false;
             actualizarRelojYTarjetas();
@@ -307,6 +559,31 @@ uicons-regular-rounded.css'>
             mostrarVistaAulas();
         });
 
+        campanaHeader?.addEventListener('click', () => {
+            const materias = obtenerMateriasNotificadas();
+            if (!materias.length) {
+                const primeraMateria = aulas
+                    .map((numero) => obtenerClasesDeAula(numero))
+                    .flat()
+                    .map((clase) => clase.materia)
+                    .find(Boolean);
+
+                if (primeraMateria) {
+                    alternarNotificacionMateria(primeraMateria);
+                    if (aulaSeleccionada) {
+                        renderizarClases(aulaSeleccionada, obtenerMinutosArgentina());
+                    }
+                }
+                return;
+            }
+
+            guardarMateriasNotificadas([]);
+            actualizarCampanaHeader();
+            if (aulaSeleccionada) {
+                renderizarClases(aulaSeleccionada, obtenerMinutosArgentina());
+            }
+        });
+
         // Al retroceder en el historial, restaura la vista que corresponda.
         window.addEventListener('popstate', (evento) => {
             const estado = evento.state;
@@ -319,12 +596,17 @@ uicons-regular-rounded.css'>
 
         function mostrarVistaAulas() {
             aulaSeleccionada = null;
+            document.body.classList.remove('vista-horarios');
+            document.body.classList.add('vista-aulas');
             document.getElementById('filtro-aulas').hidden = false;
-document.querySelector('#caja-aulas h2').hidden = false;
+            if (tituloPlanta) tituloPlanta.hidden = false;
+            headerImagen.hidden = false;
             vistaHorarios.hidden = true;
             vistaAulas.hidden = false;
         }
 
+        document.body.classList.add('vista-aulas');
+        actualizarCampanaHeader();
         actualizarRelojYTarjetas();
         setInterval(actualizarRelojYTarjetas, 15_000);
     </script>

@@ -8,9 +8,18 @@ body{
     margin: 0;
     font-family: 'poppins';
     font-weight: 500;
+    background: #ffffff;
+}
+
+body.vista-aulas {
     background-image: url("/img/daract.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
+    background-position: top center;
+}
+
+body.vista-horarios {
+    background: #ffffff;
 }
 
 .imagen{
@@ -23,7 +32,7 @@ body{
     padding-top: 2rem;
 }
 
-i{
+nav i{
     font-size: 1.5rem;
     color: white;
 }
@@ -31,8 +40,7 @@ i{
 #caja-aulas{
     display: flex;
     flex-direction: column;
-    background-color: #198754;
-    padding: 0.5rem;
+    background-color: white;
     border-radius: 20px;
 
 }
@@ -40,13 +48,139 @@ i{
 .filtro-aulas{
     border: #36127B!important;
     padding:1rem; 
-    display:flex; 
+    display:flex;
     gap:0.5rem; 
     align-items:center;
+    justify-content: space-between;
 }
 
-h2{
-    padding-left: 1rem;
+.btn-filtro .ocupado{
+    display: inline;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-size: 1rem;
+    vertical-align: middle;
+    color: #dc3545;
+}
+
+.btn-filtro .disponibles{
+    display: inline;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-size: 1rem;
+    vertical-align: middle;
+    color: #198754;
+}
+
+.btn-filtro .empezadas{
+    display: inline;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-size: 1rem;
+    vertical-align: middle;
+    color: #cf9e0a;
+}
+
+
+
+.btn-filtro{
+    display: inline-flex;
+    align-items: center;
+    border: solid 2px #1D71B8;
+    border-radius: 10px;
+    background-color: white;
+    color: #1D71B8;
+    font-weight: 600;
+}
+
+.btn-filtro:hover{
+    background-color: #F2842F;
+    color: white;
+}
+
+.volver-aulas{
+    display: flex;
+    font-weight: 600;
+}
+
+.horarios-header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.campana-header{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 1rem;
+    background: #f1e8ff;
+    color: #36127B;
+    transition: transform 0.2s ease, background 0.2s ease;
+    box-shadow: 0 4px 10px rgba(54, 18, 123, 0.12);
+}
+
+.campana-header:hover,
+.campana-header.activa {
+    background: #36127B;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.campana-header svg,
+.campana-notif svg{
+    width: 1.35rem;
+    height: 1.35rem;
+    fill: currentColor;
+}
+
+.campana-badge{
+    position: absolute;
+    top: -0.25rem;
+    right: -0.2rem;
+    min-width: 1.2rem;
+    height: 1.2rem;
+    padding: 0 0.25rem;
+    border-radius: 999px;
+    background: #ff5f5f;
+    color: white;
+    font-size: 0.68rem;
+    line-height: 1.2rem;
+    text-align: center;
+}
+
+.campana-notif{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.8);
+    color: #36127B;
+    box-shadow: 0 2px 7px rgba(82, 62, 125, 0.18);
+    cursor: pointer;
+}
+
+.campana-notif.activa {
+    background: #36127B;
+    color: white;
+}
+
+.volver-aulas p{
+    padding-top: 0.3rem;
 }
 
 .aula-card{
@@ -55,6 +189,8 @@ h2{
     min-height: 8rem;
     margin: 0;
     padding: 0.5rem;
+     border: solid 2px #1D71B8;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -62,6 +198,14 @@ h2{
     cursor: pointer;
     color: inherit;
 }
+.aula-card:hover{
+    background-color: #F2842F;
+    border: #F2842F;
+    color: white;
+    translate: 0 -5px;
+    transition: 0.2s;
+}
+
 
 .aula-card:focus-visible,
 .volver-aulas:focus-visible{
@@ -75,6 +219,7 @@ h2{
     gap: 0.75rem;
     padding: 1rem;
 }
+
 
 .aula-card .linea{
     display: flex;
@@ -97,6 +242,7 @@ h2{
 }
 
 .materia-aula{
+    color: black !important;
     margin-top: auto;
     font-size: 0.68rem;
     font-weight: 700;
@@ -136,7 +282,7 @@ h2{
 }
 
 .aula-card .aula-ocupada{
-    color: #dc3545;
+    color: #dc3545 ;
 }
 
 .aula-card .aula-pronta{
@@ -180,10 +326,11 @@ h2{
 .volver-aulas{
     margin: 1rem 0;
     padding: 0.5rem 0.75rem;
+    padding-bottom: 0 !important;
     border: 1px solid #36127B;
     border-radius: 0.5rem;
     background: white;
-    color: #36127B;
+    color: #253C6D;
 }
 
 .titulo-horarios{
@@ -206,7 +353,7 @@ h2{
 .etiquetas-horarios,
 .pista-horarios{
     display: grid;
-    grid-template-rows: repeat(14, 4rem);
+    grid-template-rows: repeat(16, 4rem);
 }
 
 .etiqueta-horario{
@@ -229,6 +376,7 @@ h2{
 }
 
 .bloque-clase{
+    position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -236,10 +384,9 @@ h2{
     overflow: hidden;
     margin: 2px 0.25rem;
     padding: 0.5rem;
-    border-left: 4px solid #36127B;
     border-radius: 0.35rem;
-    background: #eee8fa;
-    color: #24104d;
+    background: #F2842F;
+    color: black;
     font-size: 0.8rem;
 }
 
