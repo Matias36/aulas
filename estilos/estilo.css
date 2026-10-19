@@ -364,7 +364,6 @@ nav i{
     cursor: pointer;
     color: inherit;
     animation: entrada-suave 550ms ease both;
-    animation-delay: calc(var(--orden, 0) * 35ms);
 }
 .aula-card:hover{
     background-color: #F2842F;
@@ -649,6 +648,5 @@ nav i{
     .aula-card{
         animation-name: entrada-transparencia;
         animation-duration: 150ms;
-        animation-delay: 0ms;
     }
 }
