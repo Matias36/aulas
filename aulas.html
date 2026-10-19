@@ -365,6 +365,8 @@ uicons-regular-rounded.css'>
                 <span class="estado-aula"></span>
                 <span class="carrera-aula"></span>
             `;
+            // Desfase para que las tarjetas entren en escena.
+            tarjeta.style.setProperty('--orden', aulasGrid.children.length);
             tarjeta.dataset.aula = numero;
             tarjeta.addEventListener('click', () => mostrarHorarios(numero));
             aulasGrid.appendChild(tarjeta);

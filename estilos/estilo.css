@@ -67,6 +67,34 @@ body{
     background: #ffffff;
 }
 
+/* Desplaza y revela suavemente el contenido al entrar. */
+@keyframes entrada-suave{
+    from{
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Entrada breve al entrar a la página de las tarjetas con opacidad. */
+@keyframes entrada-transparencia{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* Anima el encabezado inicial y cada vista al hacerse visible. */
+.imagen,
+.vista:not([hidden]){
+    animation: entrada-suave 450ms ease both;
+}
+
 body.vista-aulas {
     background-image: url("../img/daract.jpg");
     background-size: 100%;
@@ -76,11 +104,6 @@ body.vista-aulas {
 
 body.vista-horarios {
     background: #ffffff;
-}
-
-/* Reserva espacio para que la barra fija no tape el contenido inferior */
-main.container-fluid{
-    padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
 }
 
 #materias{
@@ -240,6 +263,15 @@ nav i{
     font-weight: 600;
 }
 
+.volver-aulas i{
+    padding-top: 0.5rem;
+}
+
+.volver-aulas:hover{
+    background-color:#F2842F ;
+    color: white;
+}
+
 .horarios-header{
     display: flex;
     align-items: flex-start;
@@ -258,7 +290,7 @@ nav i{
     border-radius: 1rem;
     background: #f1e8ff;
     color: #36127B;
-    transition: transform 0.2s ease, background 0.2s ease;
+    transition: transform 0.3s ease, background 0.2s ease;
     box-shadow: 0 4px 10px rgba(54, 18, 123, 0.12);
 }
 
@@ -331,6 +363,8 @@ nav i{
     text-align: left;
     cursor: pointer;
     color: inherit;
+    animation: entrada-suave 550ms ease both;
+    animation-delay: calc(var(--orden, 0) * 35ms);
 }
 .aula-card:hover{
     background-color: #F2842F;
@@ -606,4 +640,15 @@ nav i{
     margin: 0;
     padding: 0.75rem;
     color: #666;
+}
+
+/* Evita el movimiento si la persona lo redujo en la configuración del sistema. */
+@media (prefers-reduced-motion: reduce){
+    .imagen,
+    .vista:not([hidden]),
+    .aula-card{
+        animation-name: entrada-transparencia;
+        animation-duration: 150ms;
+        animation-delay: 0ms;
+    }
 }
