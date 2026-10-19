@@ -50,6 +50,10 @@ input{
 
 }
 
+.container-fluid {
+    padding-bottom: 5.5rem;
+}
+
 .administrador{
     display: flex;
     justify-content: center;
