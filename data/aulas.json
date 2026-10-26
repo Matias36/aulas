@@ -1,0 +1,749 @@
+{
+  "daract2": {
+    "pisos": [
+      {
+        "nombre": "Planta baja",
+        "aulas": [
+          {
+            "id": "d2-01-03",
+            "etiqueta": "01-03",
+            "ancho": 2,
+            "horarios": [
+              {"dia": 1, "inicio": "07:00", "fin": "09:00", "materia": "Introducción a la Ingeniería", "docente": "Pereyra Diego", "comision": "COM 2", "carrera": "Ingeniería Industrial"},
+              {"dia": 1, "inicio": "12:00", "fin": "15:00", "materia": "Análisis Matemático II", "docente": "Bonucci Pablo", "comision": "COM 1", "carrera": "Ingeniería Electrónica"},
+              {"dia": 1, "inicio": "17:00", "fin": "20:00", "materia": "Derecho Laboral I", "docente": "Gradin Marcelo", "comision": "COM 5", "carrera": "Lic. en Administración"},
+              {"dia": 1, "inicio": "20:00", "fin": "23:00", "materia": "Álgebra II", "docente": "Suárez Lucía", "comision": "COM 2", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "08:00", "fin": "11:00", "materia": "Álgebra I", "docente": "Méndez Carla", "comision": "COM 3", "carrera": "Ingeniería Industrial"}
+            ]
+          },
+          {
+            "id": "d2-02",
+            "etiqueta": "02",
+            "horarios": [
+              {"dia": 2, "inicio": "11:00", "fin": "14:00", "materia": "Historia del Diseño", "docente": "Benítez Sergio", "comision": "COM 6", "carrera": "Diseño Multimedial"},
+              {"dia": 2, "inicio": "14:00", "fin": "17:00", "materia": "Contabilidad", "docente": "Ferreyra Tomás", "comision": "COM 3", "carrera": "Lic. en Administración"},
+              {"dia": 2, "inicio": "20:00", "fin": "23:00", "materia": "Química Orgánica", "docente": "Ferreyra Tomás", "comision": "COM 5", "carrera": "Lic. en Nutrición"},
+              {"dia": 3, "inicio": "08:00", "fin": "11:00", "materia": "Electrónica Analógica", "docente": "Benítez Sergio", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "11:00", "fin": "14:00", "materia": "Historia del Diseño", "docente": "Giménez Laura", "comision": "COM 1", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "14:00", "fin": "17:00", "materia": "Química Orgánica", "docente": "Campos Raúl", "comision": "COM 2", "carrera": "Lic. en Nutrición"},
+              {"dia": 3, "inicio": "17:00", "fin": "20:00", "materia": "Física II", "docente": "Benítez Sergio", "comision": "COM 2", "carrera": "Ingeniería Industrial"},
+              {"dia": 4, "inicio": "08:00", "fin": "11:00", "materia": "Contabilidad", "docente": "Romero Paula", "comision": "COM 3", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "20:00", "fin": "23:00", "materia": "Electrónica Analógica", "docente": "Benítez Sergio", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 5, "inicio": "08:00", "fin": "11:00", "materia": "Psicología Social", "docente": "Ortiz Valeria", "comision": "COM 2", "carrera": "Lic. en Psicología"},
+              {"dia": 5, "inicio": "14:00", "fin": "17:00", "materia": "Psicología Social", "docente": "Romero Paula", "comision": "COM 5", "carrera": "Lic. en Psicología"},
+              {"dia": 6, "inicio": "11:00", "fin": "14:00", "materia": "Psicología Social", "docente": "Romero Paula", "comision": "COM 4", "carrera": "Lic. en Psicología"}
+            ]
+          },
+          {
+            "id": "d2-04",
+            "etiqueta": "04",
+            "horarios": [
+              {"dia": 1, "inicio": "14:00", "fin": "17:00", "materia": "Física I", "docente": "Ruiz Andrés", "comision": "COM 1", "carrera": "Ingeniería Electrónica"}
+            ]
+          },
+          {
+            "id": "d2-05",
+            "etiqueta": "05",
+            "horarios": [
+              {"dia": 2, "inicio": "10:00", "fin": "13:00", "materia": "Química General", "docente": "Funes Marta", "comision": "COM 4", "carrera": "Ingeniería Industrial"}
+            ]
+          },
+          {
+            "id": "d2-06",
+            "etiqueta": "06",
+            "horarios": [
+              {"dia": 1, "inicio": "12:00", "fin": "15:00", "materia": "Derecho Laboral", "docente": "Gradin Marcelo", "comision": "COM 3", "carrera": "Lic. en Administración"}
+            ]
+          },
+          {
+            "id": "d2-08",
+            "etiqueta": "08",
+            "horarios": [
+              {"dia": 1, "inicio": "16:00", "fin": "19:00", "materia": "Estadística", "docente": "Lombardi Hernán", "comision": "COM 2", "carrera": "Lic. en Administración"}
+            ]
+          },
+          {
+            "id": "d2-sum",
+            "etiqueta": "SUM",
+            "tipo": "sum",
+            "detalle": "Salón de usos múltiples",
+            "horarios": [
+              {"dia": 1, "inicio": "10:00", "fin": "12:00", "materia": "Reunión de cátedra", "docente": "Dpto. de Ciencias Sociales", "comision": "", "carrera": ""},
+              {"dia": 1, "inicio": "13:00", "fin": "15:00", "materia": "Charla: salidas laborales", "docente": "Secretaría de Extensión", "comision": "", "carrera": ""},
+              {"dia": 1, "inicio": "16:00", "fin": "18:00", "materia": "Taller de Diseño II", "docente": "Rodríguez Natalia Monserrat", "comision": "COM 4", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "15:00", "fin": "17:00", "materia": "Clase abierta", "docente": "Secretaría Académica", "comision": "", "carrera": ""}
+            ]
+          }
+        ]
+      },
+      {
+        "nombre": "Primer piso",
+        "aulas": [
+          {
+            "id": "d2-07",
+            "etiqueta": "07",
+            "horarios": [
+              {"dia": 1, "inicio": "12:00", "fin": "15:00", "materia": "Psicología General", "docente": "Ortiz Valeria", "comision": "COM 1", "carrera": "Lic. en Psicología"}
+            ]
+          },
+          {
+            "id": "d2-09",
+            "etiqueta": "09",
+            "horarios": [
+              {"dia": 2, "inicio": "14:00", "fin": "17:00", "materia": "Sociología", "docente": "Campos Raúl", "comision": "COM 2", "carrera": "Lic. en Administración"}
+            ]
+          },
+          {
+            "id": "d2-10",
+            "etiqueta": "10",
+            "horarios": [
+              {"dia": 1, "inicio": "12:00", "fin": "15:00", "materia": "Bioquímica General", "docente": "Navarro Silvia", "comision": "COM 1", "carrera": "Lic. en Nutrición"}
+            ]
+          },
+          {
+            "id": "d2-11-13",
+            "etiqueta": "11-13",
+            "ancho": 2,
+            "horarios": [
+              {"dia": 1, "inicio": "08:00", "fin": "12:00", "materia": "Dibujo Asistido por PC", "docente": "Paz Federico", "comision": "COM 1", "carrera": "Ingeniería Industrial"},
+              {"dia": 1, "inicio": "18:00", "fin": "21:00", "materia": "Taller de Diseño II", "docente": "Rodríguez Natalia Monserrat", "comision": "COM 4", "carrera": "Diseño Multimedial"}
+            ]
+          },
+          {
+            "id": "d2-12",
+            "etiqueta": "12",
+            "horarios": [
+              {"dia": 1, "inicio": "08:00", "fin": "11:00", "materia": "Historia del Diseño", "docente": "Giménez Laura", "comision": "COM 1", "carrera": "Diseño Multimedial"},
+              {"dia": 1, "inicio": "11:00", "fin": "14:00", "materia": "Física II", "docente": "Sosa Gustavo", "comision": "COM 4", "carrera": "Ingeniería Industrial"},
+              {"dia": 1, "inicio": "14:00", "fin": "17:00", "materia": "Historia del Diseño", "docente": "Sosa Gustavo", "comision": "COM 4", "carrera": "Diseño Multimedial"},
+              {"dia": 1, "inicio": "20:00", "fin": "23:00", "materia": "Física II", "docente": "Giménez Laura", "comision": "COM 5", "carrera": "Ingeniería Industrial"},
+              {"dia": 2, "inicio": "11:00", "fin": "14:00", "materia": "Contabilidad", "docente": "Campos Raúl", "comision": "COM 3", "carrera": "Lic. en Administración"},
+              {"dia": 2, "inicio": "20:00", "fin": "23:00", "materia": "Historia del Diseño", "docente": "Ferreyra Tomás", "comision": "COM 5", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "17:00", "fin": "20:00", "materia": "Física II", "docente": "Benítez Sergio", "comision": "COM 3", "carrera": "Ingeniería Industrial"},
+              {"dia": 4, "inicio": "08:00", "fin": "11:00", "materia": "Contabilidad", "docente": "Sosa Gustavo", "comision": "COM 3", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "17:00", "fin": "20:00", "materia": "Psicología Social", "docente": "Romero Paula", "comision": "COM 2", "carrera": "Lic. en Psicología"},
+              {"dia": 5, "inicio": "14:00", "fin": "17:00", "materia": "Historia del Diseño", "docente": "Giménez Laura", "comision": "COM 6", "carrera": "Diseño Multimedial"},
+              {"dia": 5, "inicio": "17:00", "fin": "20:00", "materia": "Química Orgánica", "docente": "Ortiz Valeria", "comision": "COM 1", "carrera": "Lic. en Nutrición"},
+              {"dia": 5, "inicio": "20:00", "fin": "23:00", "materia": "Química Orgánica", "docente": "Sosa Gustavo", "comision": "COM 3", "carrera": "Lic. en Nutrición"},
+              {"dia": 6, "inicio": "14:00", "fin": "17:00", "materia": "Electrónica Analógica", "docente": "Acosta Brenda", "comision": "COM 4", "carrera": "Ingeniería Electrónica"}
+            ]
+          },
+          {
+            "id": "d2-15-17",
+            "etiqueta": "15-17",
+            "ancho": 2,
+            "horarios": [
+              {"dia": 1, "inicio": "12:00", "fin": "15:00", "materia": "Anatomía", "docente": "Molina Julia", "comision": "COM 2", "carrera": "Lic. en Enfermería"}
+            ]
+          },
+          {
+            "id": "d2-16",
+            "etiqueta": "16",
+            "horarios": [
+              {"dia": 1, "inicio": "08:00", "fin": "11:00", "materia": "Contabilidad", "docente": "Giménez Laura", "comision": "COM 6", "carrera": "Lic. en Administración"},
+              {"dia": 1, "inicio": "14:00", "fin": "17:00", "materia": "Historia del Diseño", "docente": "Ferreyra Tomás", "comision": "COM 2", "carrera": "Diseño Multimedial"},
+              {"dia": 1, "inicio": "20:00", "fin": "23:00", "materia": "Historia del Diseño", "docente": "Romero Paula", "comision": "COM 2", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "17:00", "fin": "20:00", "materia": "Historia del Diseño", "docente": "Giménez Laura", "comision": "COM 1", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "20:00", "fin": "23:00", "materia": "Química Orgánica", "docente": "Giménez Laura", "comision": "COM 6", "carrera": "Lic. en Nutrición"},
+              {"dia": 4, "inicio": "14:00", "fin": "17:00", "materia": "Historia del Diseño", "docente": "Romero Paula", "comision": "COM 5", "carrera": "Diseño Multimedial"},
+              {"dia": 5, "inicio": "08:00", "fin": "11:00", "materia": "Psicología Social", "docente": "Acosta Brenda", "comision": "COM 3", "carrera": "Lic. en Psicología"},
+              {"dia": 5, "inicio": "11:00", "fin": "14:00", "materia": "Electrónica Analógica", "docente": "Romero Paula", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 5, "inicio": "14:00", "fin": "17:00", "materia": "Electrónica Analógica", "docente": "Romero Paula", "comision": "COM 3", "carrera": "Ingeniería Electrónica"},
+              {"dia": 6, "inicio": "08:00", "fin": "11:00", "materia": "Química Orgánica", "docente": "Romero Paula", "comision": "COM 3", "carrera": "Lic. en Nutrición"}
+            ]
+          },
+          {
+            "id": "d2-14",
+            "etiqueta": "14",
+            "horarios": [
+              {"dia": 3, "inicio": "12:00", "fin": "15:00", "materia": "Programación I", "docente": "Vega Martín", "comision": "COM 3", "carrera": "Ingeniería Electrónica"}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "daract1": {
+    "pisos": [
+      {
+        "nombre": "Planta baja",
+        "aulas": [
+          {
+            "id": "d1-01-03",
+            "etiqueta": "01-03",
+            "ancho": 2,
+            "horarios": [
+              {"dia": 2, "inicio": "11:00", "fin": "14:00", "materia": "Taller de Diseño I", "docente": "Ferreyra Tomás", "comision": "COM 6", "carrera": "Diseño Multimedial"},
+              {"dia": 2, "inicio": "17:00", "fin": "20:00", "materia": "Anatomía", "docente": "Campos Raúl", "comision": "COM 2", "carrera": "Lic. en Enfermería"},
+              {"dia": 2, "inicio": "20:00", "fin": "23:00", "materia": "Electrónica Analógica", "docente": "Gradin Marcelo", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "20:00", "fin": "23:00", "materia": "Análisis Matemático I", "docente": "Pereyra Diego", "comision": "COM 1", "carrera": "Ingeniería Electrónica"},
+              {"dia": 4, "inicio": "08:00", "fin": "11:00", "materia": "Dibujo Técnico", "docente": "Lombardi Hernán", "comision": "COM 5", "carrera": "Ingeniería Industrial"},
+              {"dia": 4, "inicio": "11:00", "fin": "14:00", "materia": "Anatomía", "docente": "Navarro Silvia", "comision": "COM 4", "carrera": "Lic. en Enfermería"},
+              {"dia": 4, "inicio": "17:00", "fin": "20:00", "materia": "Química Orgánica", "docente": "Campos Raúl", "comision": "COM 4", "carrera": "Lic. en Nutrición"},
+              {"dia": 4, "inicio": "20:00", "fin": "23:00", "materia": "Física II", "docente": "Acosta Brenda", "comision": "COM 6", "carrera": "Ingeniería Industrial"},
+              {"dia": 5, "inicio": "08:00", "fin": "11:00", "materia": "Taller de Diseño I", "docente": "Pereyra Diego", "comision": "COM 6", "carrera": "Diseño Multimedial"},
+              {"dia": 5, "inicio": "11:00", "fin": "14:00", "materia": "Electrónica Analógica", "docente": "Lombardi Hernán", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 5, "inicio": "14:00", "fin": "17:00", "materia": "Física II", "docente": "Suárez Lucía", "comision": "COM 4", "carrera": "Ingeniería Industrial"},
+              {"dia": 5, "inicio": "17:00", "fin": "20:00", "materia": "Derecho Laboral I", "docente": "Vega Martín", "comision": "COM 1", "carrera": "Lic. en Administración"},
+              {"dia": 6, "inicio": "11:00", "fin": "14:00", "materia": "Química Orgánica", "docente": "Gradin Marcelo", "comision": "COM 4", "carrera": "Lic. en Nutrición"}
+            ]
+          },
+          {
+            "id": "d1-02",
+            "etiqueta": "02",
+            "horarios": [
+              {"dia": 1, "inicio": "17:00", "fin": "20:00", "materia": "Estadística", "docente": "Ortiz Valeria", "comision": "COM 3", "carrera": "Lic. en Administración"},
+              {"dia": 1, "inicio": "20:00", "fin": "23:00", "materia": "Contabilidad", "docente": "Bonucci Pablo", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 2, "inicio": "11:00", "fin": "14:00", "materia": "Química Orgánica", "docente": "Suárez Lucía", "comision": "COM 1", "carrera": "Lic. en Nutrición"},
+              {"dia": 2, "inicio": "14:00", "fin": "17:00", "materia": "Electrónica Analógica", "docente": "Ferreyra Tomás", "comision": "COM 2", "carrera": "Ingeniería Electrónica"},
+              {"dia": 2, "inicio": "20:00", "fin": "23:00", "materia": "Taller de Diseño I", "docente": "Funes Marta", "comision": "COM 6", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "14:00", "fin": "17:00", "materia": "Psicología Social", "docente": "Molina Julia", "comision": "COM 2", "carrera": "Lic. en Psicología"},
+              {"dia": 3, "inicio": "17:00", "fin": "20:00", "materia": "Sociología", "docente": "Campos Raúl", "comision": "COM 1", "carrera": "Lic. en Administración"},
+              {"dia": 3, "inicio": "20:00", "fin": "23:00", "materia": "Psicología Social", "docente": "Suárez Lucía", "comision": "COM 1", "carrera": "Lic. en Psicología"},
+              {"dia": 4, "inicio": "11:00", "fin": "14:00", "materia": "Derecho Laboral I", "docente": "Bonucci Pablo", "comision": "COM 5", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "14:00", "fin": "17:00", "materia": "Derecho Laboral I", "docente": "Vega Martín", "comision": "COM 1", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "17:00", "fin": "20:00", "materia": "Química Orgánica", "docente": "Lombardi Hernán", "comision": "COM 1", "carrera": "Lic. en Nutrición"},
+              {"dia": 5, "inicio": "08:00", "fin": "11:00", "materia": "Anatomía", "docente": "Méndez Carla", "comision": "COM 5", "carrera": "Lic. en Enfermería"},
+              {"dia": 5, "inicio": "20:00", "fin": "23:00", "materia": "Álgebra II", "docente": "Campos Raúl", "comision": "COM 2", "carrera": "Ingeniería Electrónica"},
+              {"dia": 6, "inicio": "11:00", "fin": "14:00", "materia": "Química Orgánica", "docente": "Ruiz Andrés", "comision": "COM 6", "carrera": "Lic. en Nutrición"}
+            ]
+          },
+          {
+            "id": "d1-05-07",
+            "etiqueta": "05-07",
+            "ancho": 2,
+            "horarios": [
+              {"dia": 1, "inicio": "08:00", "fin": "11:00", "materia": "Taller de Diseño I", "docente": "Paz Federico", "comision": "COM 6", "carrera": "Diseño Multimedial"},
+              {"dia": 1, "inicio": "11:00", "fin": "14:00", "materia": "Dibujo Técnico", "docente": "Méndez Carla", "comision": "COM 3", "carrera": "Ingeniería Industrial"},
+              {"dia": 1, "inicio": "14:00", "fin": "17:00", "materia": "Estadística", "docente": "Ferreyra Tomás", "comision": "COM 1", "carrera": "Lic. en Administración"},
+              {"dia": 2, "inicio": "20:00", "fin": "23:00", "materia": "Historia del Diseño", "docente": "Bonucci Pablo", "comision": "COM 5", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "08:00", "fin": "11:00", "materia": "Física II", "docente": "Suárez Lucía", "comision": "COM 3", "carrera": "Ingeniería Industrial"},
+              {"dia": 3, "inicio": "17:00", "fin": "20:00", "materia": "Bioquímica General", "docente": "Acosta Brenda", "comision": "COM 4", "carrera": "Lic. en Nutrición"},
+              {"dia": 4, "inicio": "17:00", "fin": "20:00", "materia": "Física II", "docente": "Ferreyra Tomás", "comision": "COM 1", "carrera": "Ingeniería Industrial"},
+              {"dia": 4, "inicio": "20:00", "fin": "23:00", "materia": "Bioquímica General", "docente": "Suárez Lucía", "comision": "COM 4", "carrera": "Lic. en Nutrición"},
+              {"dia": 5, "inicio": "20:00", "fin": "23:00", "materia": "Álgebra II", "docente": "Funes Marta", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 6, "inicio": "08:00", "fin": "11:00", "materia": "Dibujo Técnico", "docente": "Navarro Silvia", "comision": "COM 6", "carrera": "Ingeniería Industrial"}
+            ]
+          },
+          {
+            "id": "d1-06",
+            "etiqueta": "06",
+            "horarios": [
+              {"dia": 1, "inicio": "08:00", "fin": "11:00", "materia": "Psicología Social", "docente": "Ortiz Valeria", "comision": "COM 2", "carrera": "Lic. en Psicología"},
+              {"dia": 1, "inicio": "20:00", "fin": "23:00", "materia": "Química Orgánica", "docente": "Vega Martín", "comision": "COM 2", "carrera": "Lic. en Nutrición"},
+              {"dia": 2, "inicio": "11:00", "fin": "14:00", "materia": "Álgebra II", "docente": "Méndez Carla", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 2, "inicio": "14:00", "fin": "17:00", "materia": "Dibujo Técnico", "docente": "Gradin Marcelo", "comision": "COM 6", "carrera": "Ingeniería Industrial"},
+              {"dia": 2, "inicio": "17:00", "fin": "20:00", "materia": "Derecho Laboral I", "docente": "Ruiz Andrés", "comision": "COM 1", "carrera": "Lic. en Administración"},
+              {"dia": 3, "inicio": "08:00", "fin": "11:00", "materia": "Química Orgánica", "docente": "Molina Julia", "comision": "COM 4", "carrera": "Lic. en Nutrición"},
+              {"dia": 3, "inicio": "17:00", "fin": "20:00", "materia": "Sociología", "docente": "Acosta Brenda", "comision": "COM 3", "carrera": "Lic. en Administración"},
+              {"dia": 3, "inicio": "20:00", "fin": "23:00", "materia": "Análisis Matemático I", "docente": "Ortiz Valeria", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 4, "inicio": "08:00", "fin": "11:00", "materia": "Bioquímica General", "docente": "Ortiz Valeria", "comision": "COM 5", "carrera": "Lic. en Nutrición"},
+              {"dia": 4, "inicio": "11:00", "fin": "14:00", "materia": "Estadística", "docente": "Bonucci Pablo", "comision": "COM 6", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "14:00", "fin": "17:00", "materia": "Anatomía", "docente": "Funes Marta", "comision": "COM 1", "carrera": "Lic. en Enfermería"},
+              {"dia": 4, "inicio": "20:00", "fin": "23:00", "materia": "Electrónica Analógica", "docente": "Méndez Carla", "comision": "COM 1", "carrera": "Ingeniería Electrónica"},
+              {"dia": 5, "inicio": "11:00", "fin": "14:00", "materia": "Física II", "docente": "Paz Federico", "comision": "COM 1", "carrera": "Ingeniería Industrial"},
+              {"dia": 5, "inicio": "17:00", "fin": "20:00", "materia": "Anatomía", "docente": "Ortiz Valeria", "comision": "COM 2", "carrera": "Lic. en Enfermería"},
+              {"dia": 6, "inicio": "14:00", "fin": "17:00", "materia": "Química Orgánica", "docente": "Ortiz Valeria", "comision": "COM 3", "carrera": "Lic. en Nutrición"}
+            ]
+          },
+          {
+            "id": "d1-04",
+            "etiqueta": "04",
+            "horarios": [
+              {"dia": 1, "inicio": "14:00", "fin": "17:00", "materia": "Anatomía", "docente": "Pereyra Diego", "comision": "COM 4", "carrera": "Lic. en Enfermería"},
+              {"dia": 1, "inicio": "17:00", "fin": "20:00", "materia": "Física II", "docente": "Gradin Marcelo", "comision": "COM 5", "carrera": "Ingeniería Industrial"},
+              {"dia": 2, "inicio": "08:00", "fin": "11:00", "materia": "Bioquímica General", "docente": "Vega Martín", "comision": "COM 3", "carrera": "Lic. en Nutrición"},
+              {"dia": 3, "inicio": "14:00", "fin": "17:00", "materia": "Anatomía", "docente": "Pereyra Diego", "comision": "COM 3", "carrera": "Lic. en Enfermería"},
+              {"dia": 3, "inicio": "17:00", "fin": "20:00", "materia": "Dibujo Técnico", "docente": "Funes Marta", "comision": "COM 6", "carrera": "Ingeniería Industrial"},
+              {"dia": 3, "inicio": "20:00", "fin": "23:00", "materia": "Derecho Laboral I", "docente": "Molina Julia", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "08:00", "fin": "11:00", "materia": "Análisis Matemático I", "docente": "Ruiz Andrés", "comision": "COM 3", "carrera": "Ingeniería Electrónica"},
+              {"dia": 4, "inicio": "11:00", "fin": "14:00", "materia": "Historia del Diseño", "docente": "Méndez Carla", "comision": "COM 1", "carrera": "Diseño Multimedial"},
+              {"dia": 4, "inicio": "14:00", "fin": "17:00", "materia": "Dibujo Técnico", "docente": "Acosta Brenda", "comision": "COM 3", "carrera": "Ingeniería Industrial"},
+              {"dia": 5, "inicio": "11:00", "fin": "14:00", "materia": "Análisis Matemático I", "docente": "Bonucci Pablo", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 6, "inicio": "08:00", "fin": "11:00", "materia": "Estadística", "docente": "Pereyra Diego", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 6, "inicio": "11:00", "fin": "14:00", "materia": "Derecho Laboral I", "docente": "Navarro Silvia", "comision": "COM 2", "carrera": "Lic. en Administración"}
+            ]
+          },
+          {
+            "id": "d1-08",
+            "etiqueta": "08",
+            "horarios": [
+              {"dia": 1, "inicio": "20:00", "fin": "23:00", "materia": "Sociología", "docente": "Lombardi Hernán", "comision": "COM 1", "carrera": "Lic. en Administración"},
+              {"dia": 2, "inicio": "14:00", "fin": "17:00", "materia": "Anatomía", "docente": "Acosta Brenda", "comision": "COM 2", "carrera": "Lic. en Enfermería"},
+              {"dia": 3, "inicio": "08:00", "fin": "11:00", "materia": "Historia del Diseño", "docente": "Navarro Silvia", "comision": "COM 4", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "11:00", "fin": "14:00", "materia": "Química Orgánica", "docente": "Suárez Lucía", "comision": "COM 6", "carrera": "Lic. en Nutrición"},
+              {"dia": 4, "inicio": "08:00", "fin": "11:00", "materia": "Química Orgánica", "docente": "Vega Martín", "comision": "COM 1", "carrera": "Lic. en Nutrición"},
+              {"dia": 4, "inicio": "20:00", "fin": "23:00", "materia": "Dibujo Técnico", "docente": "Bonucci Pablo", "comision": "COM 3", "carrera": "Ingeniería Industrial"},
+              {"dia": 5, "inicio": "11:00", "fin": "14:00", "materia": "Contabilidad", "docente": "Molina Julia", "comision": "COM 3", "carrera": "Lic. en Administración"},
+              {"dia": 5, "inicio": "17:00", "fin": "20:00", "materia": "Electrónica Analógica", "docente": "Pereyra Diego", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 6, "inicio": "08:00", "fin": "11:00", "materia": "Contabilidad", "docente": "Méndez Carla", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 6, "inicio": "11:00", "fin": "14:00", "materia": "Taller de Diseño I", "docente": "Acosta Brenda", "comision": "COM 4", "carrera": "Diseño Multimedial"}
+            ]
+          },
+          {"id": "d1-biblioteca", "etiqueta": "Biblioteca", "tipo": "info", "horarioTexto": "Lun a Vie 8:00 - 21:00 · Sáb 8:00 - 14:00"}
+        ]
+      },
+      {
+        "nombre": "Primer piso",
+        "aulas": [
+          {
+            "id": "d1-09-11",
+            "etiqueta": "09-11",
+            "ancho": 2,
+            "horarios": [
+              {"dia": 2, "inicio": "11:00", "fin": "14:00", "materia": "Taller de Diseño I", "docente": "Ortiz Valeria", "comision": "COM 3", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "11:00", "fin": "14:00", "materia": "Álgebra II", "docente": "Ortiz Valeria", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "20:00", "fin": "23:00", "materia": "Análisis Matemático I", "docente": "Vega Martín", "comision": "COM 1", "carrera": "Ingeniería Electrónica"},
+              {"dia": 4, "inicio": "11:00", "fin": "14:00", "materia": "Dibujo Técnico", "docente": "Vega Martín", "comision": "COM 5", "carrera": "Ingeniería Industrial"},
+              {"dia": 5, "inicio": "11:00", "fin": "14:00", "materia": "Taller de Diseño I", "docente": "Acosta Brenda", "comision": "COM 4", "carrera": "Diseño Multimedial"},
+              {"dia": 6, "inicio": "08:00", "fin": "11:00", "materia": "Anatomía", "docente": "Méndez Carla", "comision": "COM 3", "carrera": "Lic. en Enfermería"}
+            ]
+          },
+          {
+            "id": "d1-10",
+            "etiqueta": "10",
+            "horarios": [
+              {"dia": 1, "inicio": "14:00", "fin": "17:00", "materia": "Química Orgánica", "docente": "Molina Julia", "comision": "COM 5", "carrera": "Lic. en Nutrición"},
+              {"dia": 1, "inicio": "17:00", "fin": "20:00", "materia": "Derecho Laboral I", "docente": "Méndez Carla", "comision": "COM 6", "carrera": "Lic. en Administración"},
+              {"dia": 2, "inicio": "08:00", "fin": "11:00", "materia": "Química Orgánica", "docente": "Méndez Carla", "comision": "COM 2", "carrera": "Lic. en Nutrición"},
+              {"dia": 2, "inicio": "11:00", "fin": "14:00", "materia": "Derecho Laboral I", "docente": "Navarro Silvia", "comision": "COM 6", "carrera": "Lic. en Administración"},
+              {"dia": 2, "inicio": "14:00", "fin": "17:00", "materia": "Historia del Diseño", "docente": "Ferreyra Tomás", "comision": "COM 1", "carrera": "Diseño Multimedial"},
+              {"dia": 4, "inicio": "08:00", "fin": "11:00", "materia": "Estadística", "docente": "Molina Julia", "comision": "COM 5", "carrera": "Lic. en Administración"},
+              {"dia": 5, "inicio": "08:00", "fin": "11:00", "materia": "Química Orgánica", "docente": "Méndez Carla", "comision": "COM 2", "carrera": "Lic. en Nutrición"},
+              {"dia": 5, "inicio": "17:00", "fin": "20:00", "materia": "Álgebra II", "docente": "Navarro Silvia", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 5, "inicio": "20:00", "fin": "23:00", "materia": "Dibujo Técnico", "docente": "Funes Marta", "comision": "COM 2", "carrera": "Ingeniería Industrial"},
+              {"dia": 6, "inicio": "11:00", "fin": "14:00", "materia": "Física II", "docente": "Méndez Carla", "comision": "COM 2", "carrera": "Ingeniería Industrial"},
+              {"dia": 6, "inicio": "14:00", "fin": "17:00", "materia": "Física II", "docente": "Ortiz Valeria", "comision": "COM 4", "carrera": "Ingeniería Industrial"}
+            ]
+          },
+          {
+            "id": "d1-13-15",
+            "etiqueta": "13-15",
+            "ancho": 2,
+            "horarios": [
+              {"dia": 1, "inicio": "20:00", "fin": "23:00", "materia": "Dibujo Técnico", "docente": "Suárez Lucía", "comision": "COM 6", "carrera": "Ingeniería Industrial"},
+              {"dia": 2, "inicio": "11:00", "fin": "14:00", "materia": "Dibujo Técnico", "docente": "Vega Martín", "comision": "COM 2", "carrera": "Ingeniería Industrial"},
+              {"dia": 3, "inicio": "20:00", "fin": "23:00", "materia": "Contabilidad", "docente": "Campos Raúl", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "08:00", "fin": "11:00", "materia": "Dibujo Técnico", "docente": "Paz Federico", "comision": "COM 6", "carrera": "Ingeniería Industrial"},
+              {"dia": 4, "inicio": "14:00", "fin": "17:00", "materia": "Derecho Laboral I", "docente": "Campos Raúl", "comision": "COM 3", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "17:00", "fin": "20:00", "materia": "Psicología Social", "docente": "Ruiz Andrés", "comision": "COM 5", "carrera": "Lic. en Psicología"},
+              {"dia": 4, "inicio": "20:00", "fin": "23:00", "materia": "Taller de Diseño I", "docente": "Ferreyra Tomás", "comision": "COM 6", "carrera": "Diseño Multimedial"},
+              {"dia": 5, "inicio": "08:00", "fin": "11:00", "materia": "Física II", "docente": "Vega Martín", "comision": "COM 5", "carrera": "Ingeniería Industrial"},
+              {"dia": 5, "inicio": "11:00", "fin": "14:00", "materia": "Historia del Diseño", "docente": "Suárez Lucía", "comision": "COM 6", "carrera": "Diseño Multimedial"},
+              {"dia": 5, "inicio": "14:00", "fin": "17:00", "materia": "Anatomía", "docente": "Vega Martín", "comision": "COM 5", "carrera": "Lic. en Enfermería"},
+              {"dia": 5, "inicio": "17:00", "fin": "20:00", "materia": "Química Orgánica", "docente": "Vega Martín", "comision": "COM 1", "carrera": "Lic. en Nutrición"},
+              {"dia": 5, "inicio": "20:00", "fin": "23:00", "materia": "Derecho Laboral I", "docente": "Ortiz Valeria", "comision": "COM 3", "carrera": "Lic. en Administración"}
+            ]
+          },
+          {
+            "id": "d1-14",
+            "etiqueta": "14",
+            "horarios": [
+              {"dia": 1, "inicio": "20:00", "fin": "23:00", "materia": "Historia del Diseño", "docente": "Gradin Marcelo", "comision": "COM 4", "carrera": "Diseño Multimedial"},
+              {"dia": 2, "inicio": "11:00", "fin": "14:00", "materia": "Anatomía", "docente": "Ruiz Andrés", "comision": "COM 4", "carrera": "Lic. en Enfermería"},
+              {"dia": 3, "inicio": "11:00", "fin": "14:00", "materia": "Psicología Social", "docente": "Campos Raúl", "comision": "COM 3", "carrera": "Lic. en Psicología"},
+              {"dia": 3, "inicio": "20:00", "fin": "23:00", "materia": "Dibujo Técnico", "docente": "Campos Raúl", "comision": "COM 6", "carrera": "Ingeniería Industrial"},
+              {"dia": 4, "inicio": "11:00", "fin": "14:00", "materia": "Análisis Matemático I", "docente": "Lombardi Hernán", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 4, "inicio": "14:00", "fin": "17:00", "materia": "Álgebra II", "docente": "Molina Julia", "comision": "COM 6", "carrera": "Ingeniería Electrónica"},
+              {"dia": 4, "inicio": "17:00", "fin": "20:00", "materia": "Dibujo Técnico", "docente": "Navarro Silvia", "comision": "COM 6", "carrera": "Ingeniería Industrial"},
+              {"dia": 4, "inicio": "20:00", "fin": "23:00", "materia": "Historia del Diseño", "docente": "Navarro Silvia", "comision": "COM 1", "carrera": "Diseño Multimedial"},
+              {"dia": 5, "inicio": "11:00", "fin": "14:00", "materia": "Bioquímica General", "docente": "Ferreyra Tomás", "comision": "COM 3", "carrera": "Lic. en Nutrición"},
+              {"dia": 5, "inicio": "17:00", "fin": "20:00", "materia": "Taller de Diseño I", "docente": "Suárez Lucía", "comision": "COM 6", "carrera": "Diseño Multimedial"},
+              {"dia": 6, "inicio": "08:00", "fin": "11:00", "materia": "Sociología", "docente": "Lombardi Hernán", "comision": "COM 5", "carrera": "Lic. en Administración"},
+              {"dia": 6, "inicio": "14:00", "fin": "17:00", "materia": "Psicología Social", "docente": "Acosta Brenda", "comision": "COM 1", "carrera": "Lic. en Psicología"}
+            ]
+          },
+          {
+            "id": "d1-12",
+            "etiqueta": "12",
+            "horarios": [
+              {"dia": 1, "inicio": "08:00", "fin": "11:00", "materia": "Sociología", "docente": "Molina Julia", "comision": "COM 5", "carrera": "Lic. en Administración"},
+              {"dia": 1, "inicio": "14:00", "fin": "17:00", "materia": "Psicología Social", "docente": "Bonucci Pablo", "comision": "COM 1", "carrera": "Lic. en Psicología"},
+              {"dia": 1, "inicio": "17:00", "fin": "20:00", "materia": "Estadística", "docente": "Paz Federico", "comision": "COM 3", "carrera": "Lic. en Administración"},
+              {"dia": 1, "inicio": "20:00", "fin": "23:00", "materia": "Taller de Diseño I", "docente": "Navarro Silvia", "comision": "COM 5", "carrera": "Diseño Multimedial"},
+              {"dia": 2, "inicio": "20:00", "fin": "23:00", "materia": "Electrónica Analógica", "docente": "Ferreyra Tomás", "comision": "COM 2", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "08:00", "fin": "11:00", "materia": "Física II", "docente": "Funes Marta", "comision": "COM 2", "carrera": "Ingeniería Industrial"},
+              {"dia": 3, "inicio": "20:00", "fin": "23:00", "materia": "Análisis Matemático I", "docente": "Méndez Carla", "comision": "COM 6", "carrera": "Ingeniería Electrónica"},
+              {"dia": 4, "inicio": "14:00", "fin": "17:00", "materia": "Anatomía", "docente": "Molina Julia", "comision": "COM 5", "carrera": "Lic. en Enfermería"},
+              {"dia": 4, "inicio": "17:00", "fin": "20:00", "materia": "Química Orgánica", "docente": "Paz Federico", "comision": "COM 1", "carrera": "Lic. en Nutrición"},
+              {"dia": 5, "inicio": "08:00", "fin": "11:00", "materia": "Química Orgánica", "docente": "Ruiz Andrés", "comision": "COM 4", "carrera": "Lic. en Nutrición"},
+              {"dia": 5, "inicio": "20:00", "fin": "23:00", "materia": "Álgebra II", "docente": "Suárez Lucía", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 6, "inicio": "14:00", "fin": "17:00", "materia": "Sociología", "docente": "Vega Martín", "comision": "COM 5", "carrera": "Lic. en Administración"}
+            ]
+          },
+          {
+            "id": "d1-16",
+            "etiqueta": "16",
+            "horarios": [
+              {"dia": 1, "inicio": "08:00", "fin": "11:00", "materia": "Análisis Matemático I", "docente": "Paz Federico", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 1, "inicio": "11:00", "fin": "14:00", "materia": "Contabilidad", "docente": "Acosta Brenda", "comision": "COM 2", "carrera": "Lic. en Administración"},
+              {"dia": 1, "inicio": "20:00", "fin": "23:00", "materia": "Historia del Diseño", "docente": "Molina Julia", "comision": "COM 3", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "08:00", "fin": "11:00", "materia": "Física II", "docente": "Campos Raúl", "comision": "COM 5", "carrera": "Ingeniería Industrial"},
+              {"dia": 3, "inicio": "14:00", "fin": "17:00", "materia": "Derecho Laboral I", "docente": "Funes Marta", "comision": "COM 6", "carrera": "Lic. en Administración"},
+              {"dia": 3, "inicio": "17:00", "fin": "20:00", "materia": "Química Orgánica", "docente": "Funes Marta", "comision": "COM 2", "carrera": "Lic. en Nutrición"},
+              {"dia": 4, "inicio": "11:00", "fin": "14:00", "materia": "Estadística", "docente": "Gradin Marcelo", "comision": "COM 6", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "14:00", "fin": "17:00", "materia": "Derecho Laboral I", "docente": "Ortiz Valeria", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "17:00", "fin": "20:00", "materia": "Análisis Matemático I", "docente": "Suárez Lucía", "comision": "COM 2", "carrera": "Ingeniería Electrónica"},
+              {"dia": 5, "inicio": "08:00", "fin": "11:00", "materia": "Física II", "docente": "Ruiz Andrés", "comision": "COM 5", "carrera": "Ingeniería Industrial"},
+              {"dia": 5, "inicio": "11:00", "fin": "14:00", "materia": "Contabilidad", "docente": "Ferreyra Tomás", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 5, "inicio": "14:00", "fin": "17:00", "materia": "Contabilidad", "docente": "Navarro Silvia", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 6, "inicio": "08:00", "fin": "11:00", "materia": "Física II", "docente": "Acosta Brenda", "comision": "COM 5", "carrera": "Ingeniería Industrial"}
+            ]
+          },
+          {
+            "id": "d1-17",
+            "etiqueta": "17",
+            "horarios": [
+              {"dia": 1, "inicio": "14:00", "fin": "17:00", "materia": "Álgebra II", "docente": "Paz Federico", "comision": "COM 2", "carrera": "Ingeniería Electrónica"},
+              {"dia": 2, "inicio": "08:00", "fin": "11:00", "materia": "Taller de Diseño I", "docente": "Ruiz Andrés", "comision": "COM 4", "carrera": "Diseño Multimedial"},
+              {"dia": 2, "inicio": "20:00", "fin": "23:00", "materia": "Taller de Diseño I", "docente": "Pereyra Diego", "comision": "COM 4", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "17:00", "fin": "20:00", "materia": "Electrónica Analógica", "docente": "Bonucci Pablo", "comision": "COM 1", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "20:00", "fin": "23:00", "materia": "Dibujo Técnico", "docente": "Pereyra Diego", "comision": "COM 6", "carrera": "Ingeniería Industrial"},
+              {"dia": 4, "inicio": "08:00", "fin": "11:00", "materia": "Bioquímica General", "docente": "Navarro Silvia", "comision": "COM 3", "carrera": "Lic. en Nutrición"},
+              {"dia": 4, "inicio": "14:00", "fin": "17:00", "materia": "Estadística", "docente": "Navarro Silvia", "comision": "COM 3", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "20:00", "fin": "23:00", "materia": "Anatomía", "docente": "Ortiz Valeria", "comision": "COM 4", "carrera": "Lic. en Enfermería"},
+              {"dia": 5, "inicio": "17:00", "fin": "20:00", "materia": "Dibujo Técnico", "docente": "Lombardi Hernán", "comision": "COM 1", "carrera": "Ingeniería Industrial"},
+              {"dia": 5, "inicio": "20:00", "fin": "23:00", "materia": "Contabilidad", "docente": "Bonucci Pablo", "comision": "COM 3", "carrera": "Lic. en Administración"}
+            ]
+          },
+          {
+            "id": "d1-18",
+            "etiqueta": "18",
+            "horarios": [
+              {"dia": 1, "inicio": "11:00", "fin": "14:00", "materia": "Psicología Social", "docente": "Méndez Carla", "comision": "COM 5", "carrera": "Lic. en Psicología"},
+              {"dia": 1, "inicio": "17:00", "fin": "20:00", "materia": "Electrónica Analógica", "docente": "Acosta Brenda", "comision": "COM 3", "carrera": "Ingeniería Electrónica"},
+              {"dia": 2, "inicio": "08:00", "fin": "11:00", "materia": "Análisis Matemático I", "docente": "Ruiz Andrés", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 2, "inicio": "11:00", "fin": "14:00", "materia": "Análisis Matemático I", "docente": "Molina Julia", "comision": "COM 1", "carrera": "Ingeniería Electrónica"},
+              {"dia": 2, "inicio": "17:00", "fin": "20:00", "materia": "Taller de Diseño I", "docente": "Pereyra Diego", "comision": "COM 3", "carrera": "Diseño Multimedial"},
+              {"dia": 2, "inicio": "20:00", "fin": "23:00", "materia": "Bioquímica General", "docente": "Suárez Lucía", "comision": "COM 3", "carrera": "Lic. en Nutrición"},
+              {"dia": 3, "inicio": "08:00", "fin": "11:00", "materia": "Estadística", "docente": "Méndez Carla", "comision": "COM 1", "carrera": "Lic. en Administración"},
+              {"dia": 3, "inicio": "17:00", "fin": "20:00", "materia": "Química Orgánica", "docente": "Ferreyra Tomás", "comision": "COM 5", "carrera": "Lic. en Nutrición"},
+              {"dia": 3, "inicio": "20:00", "fin": "23:00", "materia": "Anatomía", "docente": "Vega Martín", "comision": "COM 3", "carrera": "Lic. en Enfermería"},
+              {"dia": 4, "inicio": "08:00", "fin": "11:00", "materia": "Contabilidad", "docente": "Méndez Carla", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "17:00", "fin": "20:00", "materia": "Historia del Diseño", "docente": "Gradin Marcelo", "comision": "COM 4", "carrera": "Diseño Multimedial"},
+              {"dia": 5, "inicio": "11:00", "fin": "14:00", "materia": "Análisis Matemático I", "docente": "Vega Martín", "comision": "COM 1", "carrera": "Ingeniería Electrónica"}
+            ]
+          },
+          {
+            "id": "d1-19",
+            "etiqueta": "19",
+            "horarios": [
+              {"dia": 1, "inicio": "14:00", "fin": "17:00", "materia": "Bioquímica General", "docente": "Ruiz Andrés", "comision": "COM 6", "carrera": "Lic. en Nutrición"},
+              {"dia": 1, "inicio": "17:00", "fin": "20:00", "materia": "Álgebra II", "docente": "Navarro Silvia", "comision": "COM 2", "carrera": "Ingeniería Electrónica"},
+              {"dia": 1, "inicio": "20:00", "fin": "23:00", "materia": "Taller de Diseño I", "docente": "Campos Raúl", "comision": "COM 3", "carrera": "Diseño Multimedial"},
+              {"dia": 2, "inicio": "11:00", "fin": "14:00", "materia": "Derecho Laboral I", "docente": "Suárez Lucía", "comision": "COM 3", "carrera": "Lic. en Administración"},
+              {"dia": 2, "inicio": "20:00", "fin": "23:00", "materia": "Análisis Matemático I", "docente": "Acosta Brenda", "comision": "COM 1", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "14:00", "fin": "17:00", "materia": "Física II", "docente": "Funes Marta", "comision": "COM 2", "carrera": "Ingeniería Industrial"},
+              {"dia": 3, "inicio": "17:00", "fin": "20:00", "materia": "Historia del Diseño", "docente": "Lombardi Hernán", "comision": "COM 5", "carrera": "Diseño Multimedial"},
+              {"dia": 4, "inicio": "11:00", "fin": "14:00", "materia": "Álgebra II", "docente": "Ortiz Valeria", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 4, "inicio": "14:00", "fin": "17:00", "materia": "Electrónica Analógica", "docente": "Campos Raúl", "comision": "COM 6", "carrera": "Ingeniería Electrónica"},
+              {"dia": 5, "inicio": "11:00", "fin": "14:00", "materia": "Dibujo Técnico", "docente": "Vega Martín", "comision": "COM 3", "carrera": "Ingeniería Industrial"},
+              {"dia": 5, "inicio": "20:00", "fin": "23:00", "materia": "Sociología", "docente": "Lombardi Hernán", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 6, "inicio": "08:00", "fin": "11:00", "materia": "Álgebra II", "docente": "Vega Martín", "comision": "COM 5", "carrera": "Ingeniería Electrónica"}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "dorrego1": {
+    "pisos": [
+      {
+        "nombre": "Planta baja",
+        "aulas": [
+          {
+            "id": "do-01",
+            "etiqueta": "01",
+            "horarios": [
+              {"dia": 1, "inicio": "14:00", "fin": "17:00", "materia": "Análisis Matemático I", "docente": "Ortiz Valeria", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 1, "inicio": "17:00", "fin": "20:00", "materia": "Taller de Diseño I", "docente": "Giménez Laura", "comision": "COM 2", "carrera": "Diseño Multimedial"},
+              {"dia": 2, "inicio": "14:00", "fin": "17:00", "materia": "Contabilidad", "docente": "Navarro Silvia", "comision": "COM 5", "carrera": "Lic. en Administración"},
+              {"dia": 3, "inicio": "08:00", "fin": "11:00", "materia": "Derecho Laboral I", "docente": "Gradin Marcelo", "comision": "COM 6", "carrera": "Lic. en Administración"},
+              {"dia": 3, "inicio": "14:00", "fin": "17:00", "materia": "Electrónica Analógica", "docente": "Paz Federico", "comision": "COM 3", "carrera": "Ingeniería Electrónica"},
+              {"dia": 4, "inicio": "08:00", "fin": "11:00", "materia": "Taller de Diseño I", "docente": "Vega Martín", "comision": "COM 3", "carrera": "Diseño Multimedial"},
+              {"dia": 4, "inicio": "11:00", "fin": "14:00", "materia": "Análisis Matemático I", "docente": "Molina Julia", "comision": "COM 1", "carrera": "Ingeniería Electrónica"}
+            ]
+          },
+          {
+            "id": "do-02",
+            "etiqueta": "02",
+            "horarios": [
+              {"dia": 1, "inicio": "11:00", "fin": "14:00", "materia": "Física II", "docente": "Benítez Sergio", "comision": "COM 2", "carrera": "Ingeniería Industrial"},
+              {"dia": 3, "inicio": "08:00", "fin": "11:00", "materia": "Química Orgánica", "docente": "Funes Marta", "comision": "COM 4", "carrera": "Lic. en Nutrición"},
+              {"dia": 4, "inicio": "08:00", "fin": "11:00", "materia": "Sociología", "docente": "Ferreyra Tomás", "comision": "COM 2", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "17:00", "fin": "20:00", "materia": "Estadística", "docente": "Vega Martín", "comision": "COM 5", "carrera": "Lic. en Administración"},
+              {"dia": 5, "inicio": "11:00", "fin": "14:00", "materia": "Taller de Diseño I", "docente": "Méndez Carla", "comision": "COM 6", "carrera": "Diseño Multimedial"},
+              {"dia": 5, "inicio": "14:00", "fin": "17:00", "materia": "Electrónica Analógica", "docente": "Romero Paula", "comision": "COM 1", "carrera": "Ingeniería Electrónica"}
+            ]
+          },
+          {
+            "id": "do-03",
+            "etiqueta": "03",
+            "compu": true,
+            "horarios": [
+              {"dia": 1, "inicio": "08:00", "fin": "11:00", "materia": "Informática I", "docente": "Paz Federico", "comision": "COM 2", "carrera": "Lic. en Administración"},
+              {"dia": 1, "inicio": "11:00", "fin": "14:00", "materia": "Bases de Datos", "docente": "Gradin Marcelo", "comision": "COM 2", "carrera": "Ingeniería Electrónica"},
+              {"dia": 1, "inicio": "17:00", "fin": "20:00", "materia": "Informática I", "docente": "Ferreyra Tomás", "comision": "COM 5", "carrera": "Lic. en Administración"},
+              {"dia": 2, "inicio": "08:00", "fin": "11:00", "materia": "Informática I", "docente": "Paz Federico", "comision": "COM 5", "carrera": "Lic. en Administración"},
+              {"dia": 2, "inicio": "11:00", "fin": "14:00", "materia": "Edición Digital", "docente": "Molina Julia", "comision": "COM 2", "carrera": "Diseño Multimedial"},
+              {"dia": 2, "inicio": "17:00", "fin": "20:00", "materia": "Informática I", "docente": "Gradin Marcelo", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 2, "inicio": "20:00", "fin": "23:00", "materia": "Programación II", "docente": "Paz Federico", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "17:00", "fin": "20:00", "materia": "Programación II", "docente": "Ruiz Andrés", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "20:00", "fin": "23:00", "materia": "Programación II", "docente": "Molina Julia", "comision": "COM 6", "carrera": "Ingeniería Electrónica"},
+              {"dia": 4, "inicio": "08:00", "fin": "11:00", "materia": "Bases de Datos", "docente": "Lombardi Hernán", "comision": "COM 2", "carrera": "Ingeniería Electrónica"},
+              {"dia": 4, "inicio": "14:00", "fin": "17:00", "materia": "Diseño Web", "docente": "Ruiz Andrés", "comision": "COM 5", "carrera": "Diseño Multimedial"},
+              {"dia": 4, "inicio": "20:00", "fin": "23:00", "materia": "Dibujo Asistido por PC", "docente": "Acosta Brenda", "comision": "COM 3", "carrera": "Ingeniería Industrial"},
+              {"dia": 5, "inicio": "17:00", "fin": "20:00", "materia": "Informática I", "docente": "Sosa Gustavo", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 5, "inicio": "20:00", "fin": "23:00", "materia": "Bases de Datos", "docente": "Funes Marta", "comision": "COM 1", "carrera": "Ingeniería Electrónica"}
+            ]
+          },
+          {
+            "id": "do-04",
+            "etiqueta": "04",
+            "horarios": [
+              {"dia": 1, "inicio": "11:00", "fin": "14:00", "materia": "Química Orgánica", "docente": "Molina Julia", "comision": "COM 2", "carrera": "Lic. en Nutrición"},
+              {"dia": 2, "inicio": "11:00", "fin": "14:00", "materia": "Dibujo Técnico", "docente": "Ortiz Valeria", "comision": "COM 3", "carrera": "Ingeniería Industrial"},
+              {"dia": 2, "inicio": "17:00", "fin": "20:00", "materia": "Anatomía", "docente": "Giménez Laura", "comision": "COM 4", "carrera": "Lic. en Enfermería"},
+              {"dia": 3, "inicio": "14:00", "fin": "17:00", "materia": "Electrónica Analógica", "docente": "Méndez Carla", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "17:00", "fin": "20:00", "materia": "Contabilidad", "docente": "Acosta Brenda", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "17:00", "fin": "20:00", "materia": "Derecho Laboral I", "docente": "Pereyra Diego", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 6, "inicio": "11:00", "fin": "14:00", "materia": "Análisis Matemático I", "docente": "Pereyra Diego", "comision": "COM 5", "carrera": "Ingeniería Electrónica"}
+            ]
+          },
+          {
+            "id": "do-05",
+            "etiqueta": "05",
+            "horarios": [
+              {"dia": 1, "inicio": "11:00", "fin": "14:00", "materia": "Estadística", "docente": "Romero Paula", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 1, "inicio": "20:00", "fin": "23:00", "materia": "Contabilidad", "docente": "Méndez Carla", "comision": "COM 1", "carrera": "Lic. en Administración"},
+              {"dia": 2, "inicio": "08:00", "fin": "11:00", "materia": "Física II", "docente": "Ruiz Andrés", "comision": "COM 5", "carrera": "Ingeniería Industrial"},
+              {"dia": 2, "inicio": "14:00", "fin": "17:00", "materia": "Análisis Matemático I", "docente": "Pereyra Diego", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "11:00", "fin": "14:00", "materia": "Álgebra II", "docente": "Campos Raúl", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "14:00", "fin": "17:00", "materia": "Bioquímica General", "docente": "Acosta Brenda", "comision": "COM 6", "carrera": "Lic. en Nutrición"},
+              {"dia": 3, "inicio": "17:00", "fin": "20:00", "materia": "Química Orgánica", "docente": "Giménez Laura", "comision": "COM 3", "carrera": "Lic. en Nutrición"},
+              {"dia": 5, "inicio": "14:00", "fin": "17:00", "materia": "Química Orgánica", "docente": "Vega Martín", "comision": "COM 6", "carrera": "Lic. en Nutrición"},
+              {"dia": 5, "inicio": "17:00", "fin": "20:00", "materia": "Anatomía", "docente": "Méndez Carla", "comision": "COM 3", "carrera": "Lic. en Enfermería"},
+              {"dia": 5, "inicio": "20:00", "fin": "23:00", "materia": "Taller de Diseño I", "docente": "Navarro Silvia", "comision": "COM 3", "carrera": "Diseño Multimedial"}
+            ]
+          },
+          {
+            "id": "do-06",
+            "etiqueta": "06",
+            "horarios": [
+              {"dia": 1, "inicio": "08:00", "fin": "11:00", "materia": "Sociología", "docente": "Giménez Laura", "comision": "COM 2", "carrera": "Lic. en Administración"},
+              {"dia": 1, "inicio": "14:00", "fin": "17:00", "materia": "Contabilidad", "docente": "Funes Marta", "comision": "COM 5", "carrera": "Lic. en Administración"},
+              {"dia": 1, "inicio": "17:00", "fin": "20:00", "materia": "Álgebra II", "docente": "Acosta Brenda", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 2, "inicio": "20:00", "fin": "23:00", "materia": "Análisis Matemático I", "docente": "Ortiz Valeria", "comision": "COM 2", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "14:00", "fin": "17:00", "materia": "Álgebra II", "docente": "Gradin Marcelo", "comision": "COM 2", "carrera": "Ingeniería Electrónica"},
+              {"dia": 4, "inicio": "11:00", "fin": "14:00", "materia": "Anatomía", "docente": "Benítez Sergio", "comision": "COM 6", "carrera": "Lic. en Enfermería"},
+              {"dia": 4, "inicio": "14:00", "fin": "17:00", "materia": "Dibujo Técnico", "docente": "Acosta Brenda", "comision": "COM 5", "carrera": "Ingeniería Industrial"},
+              {"dia": 4, "inicio": "20:00", "fin": "23:00", "materia": "Dibujo Técnico", "docente": "Funes Marta", "comision": "COM 6", "carrera": "Ingeniería Industrial"},
+              {"dia": 5, "inicio": "14:00", "fin": "17:00", "materia": "Álgebra II", "docente": "Pereyra Diego", "comision": "COM 3", "carrera": "Ingeniería Electrónica"},
+              {"dia": 5, "inicio": "17:00", "fin": "20:00", "materia": "Derecho Laboral I", "docente": "Sosa Gustavo", "comision": "COM 6", "carrera": "Lic. en Administración"},
+              {"dia": 5, "inicio": "20:00", "fin": "23:00", "materia": "Dibujo Técnico", "docente": "Ortiz Valeria", "comision": "COM 1", "carrera": "Ingeniería Industrial"},
+              {"dia": 6, "inicio": "14:00", "fin": "17:00", "materia": "Estadística", "docente": "Giménez Laura", "comision": "COM 5", "carrera": "Lic. en Administración"}
+            ]
+          },
+          {
+            "id": "do-07",
+            "etiqueta": "07",
+            "horarios": [
+              {"dia": 1, "inicio": "14:00", "fin": "17:00", "materia": "Contabilidad", "docente": "Lombardi Hernán", "comision": "COM 5", "carrera": "Lic. en Administración"},
+              {"dia": 1, "inicio": "17:00", "fin": "20:00", "materia": "Física II", "docente": "Lombardi Hernán", "comision": "COM 1", "carrera": "Ingeniería Industrial"},
+              {"dia": 1, "inicio": "20:00", "fin": "23:00", "materia": "Psicología Social", "docente": "Benítez Sergio", "comision": "COM 1", "carrera": "Lic. en Psicología"},
+              {"dia": 2, "inicio": "14:00", "fin": "17:00", "materia": "Álgebra II", "docente": "Benítez Sergio", "comision": "COM 2", "carrera": "Ingeniería Electrónica"},
+              {"dia": 2, "inicio": "20:00", "fin": "23:00", "materia": "Derecho Laboral I", "docente": "Ruiz Andrés", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 3, "inicio": "08:00", "fin": "11:00", "materia": "Contabilidad", "docente": "Pereyra Diego", "comision": "COM 6", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "08:00", "fin": "11:00", "materia": "Sociología", "docente": "Ferreyra Tomás", "comision": "COM 6", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "11:00", "fin": "14:00", "materia": "Electrónica Analógica", "docente": "Navarro Silvia", "comision": "COM 2", "carrera": "Ingeniería Electrónica"},
+              {"dia": 4, "inicio": "17:00", "fin": "20:00", "materia": "Análisis Matemático I", "docente": "Vega Martín", "comision": "COM 1", "carrera": "Ingeniería Electrónica"},
+              {"dia": 5, "inicio": "20:00", "fin": "23:00", "materia": "Bioquímica General", "docente": "Romero Paula", "comision": "COM 1", "carrera": "Lic. en Nutrición"},
+              {"dia": 6, "inicio": "11:00", "fin": "14:00", "materia": "Psicología Social", "docente": "Lombardi Hernán", "comision": "COM 3", "carrera": "Lic. en Psicología"}
+            ]
+          },
+          {
+            "id": "do-08",
+            "etiqueta": "08",
+            "horarios": [
+              {"dia": 1, "inicio": "14:00", "fin": "17:00", "materia": "Bioquímica General", "docente": "Benítez Sergio", "comision": "COM 1", "carrera": "Lic. en Nutrición"},
+              {"dia": 1, "inicio": "20:00", "fin": "23:00", "materia": "Bioquímica General", "docente": "Ruiz Andrés", "comision": "COM 6", "carrera": "Lic. en Nutrición"},
+              {"dia": 2, "inicio": "11:00", "fin": "14:00", "materia": "Estadística", "docente": "Ferreyra Tomás", "comision": "COM 2", "carrera": "Lic. en Administración"},
+              {"dia": 3, "inicio": "08:00", "fin": "11:00", "materia": "Álgebra II", "docente": "Bonucci Pablo", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "14:00", "fin": "17:00", "materia": "Derecho Laboral I", "docente": "Bonucci Pablo", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "08:00", "fin": "11:00", "materia": "Estadística", "docente": "Bonucci Pablo", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "14:00", "fin": "17:00", "materia": "Sociología", "docente": "Navarro Silvia", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 5, "inicio": "20:00", "fin": "23:00", "materia": "Anatomía", "docente": "Sosa Gustavo", "comision": "COM 4", "carrera": "Lic. en Enfermería"}
+            ]
+          }
+        ]
+      },
+      {
+        "nombre": "Primer piso",
+        "aulas": [
+          {
+            "id": "do-09",
+            "etiqueta": "09",
+            "horarios": [
+              {"dia": 1, "inicio": "08:00", "fin": "11:00", "materia": "Taller de Diseño I", "docente": "Bonucci Pablo", "comision": "COM 2", "carrera": "Diseño Multimedial"},
+              {"dia": 1, "inicio": "11:00", "fin": "14:00", "materia": "Bioquímica General", "docente": "Campos Raúl", "comision": "COM 6", "carrera": "Lic. en Nutrición"},
+              {"dia": 1, "inicio": "20:00", "fin": "23:00", "materia": "Bioquímica General", "docente": "Navarro Silvia", "comision": "COM 2", "carrera": "Lic. en Nutrición"},
+              {"dia": 2, "inicio": "11:00", "fin": "14:00", "materia": "Álgebra II", "docente": "Sosa Gustavo", "comision": "COM 3", "carrera": "Ingeniería Electrónica"},
+              {"dia": 2, "inicio": "17:00", "fin": "20:00", "materia": "Historia del Diseño", "docente": "Benítez Sergio", "comision": "COM 3", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "11:00", "fin": "14:00", "materia": "Derecho Laboral I", "docente": "Paz Federico", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 3, "inicio": "14:00", "fin": "17:00", "materia": "Taller de Diseño I", "docente": "Campos Raúl", "comision": "COM 1", "carrera": "Diseño Multimedial"},
+              {"dia": 4, "inicio": "08:00", "fin": "11:00", "materia": "Sociología", "docente": "Molina Julia", "comision": "COM 6", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "17:00", "fin": "20:00", "materia": "Anatomía", "docente": "Gradin Marcelo", "comision": "COM 5", "carrera": "Lic. en Enfermería"},
+              {"dia": 4, "inicio": "20:00", "fin": "23:00", "materia": "Análisis Matemático I", "docente": "Sosa Gustavo", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 5, "inicio": "08:00", "fin": "11:00", "materia": "Derecho Laboral I", "docente": "Molina Julia", "comision": "COM 2", "carrera": "Lic. en Administración"}
+            ]
+          },
+          {
+            "id": "do-10",
+            "etiqueta": "10",
+            "horarios": [
+              {"dia": 1, "inicio": "17:00", "fin": "20:00", "materia": "Psicología Social", "docente": "Giménez Laura", "comision": "COM 2", "carrera": "Lic. en Psicología"},
+              {"dia": 1, "inicio": "20:00", "fin": "23:00", "materia": "Taller de Diseño I", "docente": "Molina Julia", "comision": "COM 4", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "08:00", "fin": "11:00", "materia": "Sociología", "docente": "Bonucci Pablo", "comision": "COM 1", "carrera": "Lic. en Administración"},
+              {"dia": 3, "inicio": "11:00", "fin": "14:00", "materia": "Álgebra II", "docente": "Ferreyra Tomás", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "14:00", "fin": "17:00", "materia": "Sociología", "docente": "Ruiz Andrés", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 3, "inicio": "20:00", "fin": "23:00", "materia": "Taller de Diseño I", "docente": "Pereyra Diego", "comision": "COM 1", "carrera": "Diseño Multimedial"},
+              {"dia": 4, "inicio": "08:00", "fin": "11:00", "materia": "Psicología Social", "docente": "Suárez Lucía", "comision": "COM 4", "carrera": "Lic. en Psicología"},
+              {"dia": 5, "inicio": "11:00", "fin": "14:00", "materia": "Dibujo Técnico", "docente": "Bonucci Pablo", "comision": "COM 1", "carrera": "Ingeniería Industrial"}
+            ]
+          },
+          {
+            "id": "do-11",
+            "etiqueta": "11",
+            "horarios": [
+              {"dia": 1, "inicio": "11:00", "fin": "14:00", "materia": "Electrónica Analógica", "docente": "Benítez Sergio", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 1, "inicio": "14:00", "fin": "17:00", "materia": "Álgebra II", "docente": "Suárez Lucía", "comision": "COM 1", "carrera": "Ingeniería Electrónica"},
+              {"dia": 1, "inicio": "17:00", "fin": "20:00", "materia": "Álgebra II", "docente": "Acosta Brenda", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "08:00", "fin": "11:00", "materia": "Análisis Matemático I", "docente": "Acosta Brenda", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "14:00", "fin": "17:00", "materia": "Anatomía", "docente": "Gradin Marcelo", "comision": "COM 4", "carrera": "Lic. en Enfermería"},
+              {"dia": 4, "inicio": "17:00", "fin": "20:00", "materia": "Bioquímica General", "docente": "Benítez Sergio", "comision": "COM 5", "carrera": "Lic. en Nutrición"},
+              {"dia": 4, "inicio": "20:00", "fin": "23:00", "materia": "Física II", "docente": "Paz Federico", "comision": "COM 2", "carrera": "Ingeniería Industrial"},
+              {"dia": 5, "inicio": "08:00", "fin": "11:00", "materia": "Álgebra II", "docente": "Sosa Gustavo", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 5, "inicio": "14:00", "fin": "17:00", "materia": "Electrónica Analógica", "docente": "Molina Julia", "comision": "COM 1", "carrera": "Ingeniería Electrónica"},
+              {"dia": 5, "inicio": "20:00", "fin": "23:00", "materia": "Electrónica Analógica", "docente": "Pereyra Diego", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 6, "inicio": "11:00", "fin": "14:00", "materia": "Electrónica Analógica", "docente": "Sosa Gustavo", "comision": "COM 3", "carrera": "Ingeniería Electrónica"}
+            ]
+          },
+          {
+            "id": "do-12",
+            "etiqueta": "12",
+            "horarios": [
+              {"dia": 1, "inicio": "14:00", "fin": "17:00", "materia": "Bioquímica General", "docente": "Sosa Gustavo", "comision": "COM 5", "carrera": "Lic. en Nutrición"},
+              {"dia": 1, "inicio": "17:00", "fin": "20:00", "materia": "Psicología Social", "docente": "Ortiz Valeria", "comision": "COM 1", "carrera": "Lic. en Psicología"},
+              {"dia": 2, "inicio": "08:00", "fin": "11:00", "materia": "Anatomía", "docente": "Campos Raúl", "comision": "COM 4", "carrera": "Lic. en Enfermería"},
+              {"dia": 2, "inicio": "17:00", "fin": "20:00", "materia": "Dibujo Técnico", "docente": "Romero Paula", "comision": "COM 4", "carrera": "Ingeniería Industrial"},
+              {"dia": 2, "inicio": "20:00", "fin": "23:00", "materia": "Sociología", "docente": "Giménez Laura", "comision": "COM 3", "carrera": "Lic. en Administración"},
+              {"dia": 3, "inicio": "11:00", "fin": "14:00", "materia": "Sociología", "docente": "Sosa Gustavo", "comision": "COM 2", "carrera": "Lic. en Administración"},
+              {"dia": 3, "inicio": "14:00", "fin": "17:00", "materia": "Química Orgánica", "docente": "Sosa Gustavo", "comision": "COM 5", "carrera": "Lic. en Nutrición"},
+              {"dia": 3, "inicio": "17:00", "fin": "20:00", "materia": "Contabilidad", "docente": "Suárez Lucía", "comision": "COM 6", "carrera": "Lic. en Administración"},
+              {"dia": 3, "inicio": "20:00", "fin": "23:00", "materia": "Estadística", "docente": "Molina Julia", "comision": "COM 5", "carrera": "Lic. en Administración"},
+              {"dia": 4, "inicio": "11:00", "fin": "14:00", "materia": "Física II", "docente": "Paz Federico", "comision": "COM 4", "carrera": "Ingeniería Industrial"},
+              {"dia": 4, "inicio": "20:00", "fin": "23:00", "materia": "Psicología Social", "docente": "Paz Federico", "comision": "COM 1", "carrera": "Lic. en Psicología"},
+              {"dia": 5, "inicio": "11:00", "fin": "14:00", "materia": "Contabilidad", "docente": "Ortiz Valeria", "comision": "COM 4", "carrera": "Lic. en Administración"},
+              {"dia": 5, "inicio": "14:00", "fin": "17:00", "materia": "Psicología Social", "docente": "Acosta Brenda", "comision": "COM 1", "carrera": "Lic. en Psicología"}
+            ]
+          },
+          {
+            "id": "do-13",
+            "etiqueta": "13",
+            "horarios": [
+              {"dia": 1, "inicio": "08:00", "fin": "11:00", "materia": "Contabilidad", "docente": "Molina Julia", "comision": "COM 3", "carrera": "Lic. en Administración"},
+              {"dia": 1, "inicio": "11:00", "fin": "14:00", "materia": "Dibujo Técnico", "docente": "Ortiz Valeria", "comision": "COM 1", "carrera": "Ingeniería Industrial"},
+              {"dia": 1, "inicio": "14:00", "fin": "17:00", "materia": "Análisis Matemático I", "docente": "Pereyra Diego", "comision": "COM 2", "carrera": "Ingeniería Electrónica"},
+              {"dia": 1, "inicio": "17:00", "fin": "20:00", "materia": "Bioquímica General", "docente": "Paz Federico", "comision": "COM 5", "carrera": "Lic. en Nutrición"},
+              {"dia": 2, "inicio": "08:00", "fin": "11:00", "materia": "Historia del Diseño", "docente": "Benítez Sergio", "comision": "COM 5", "carrera": "Diseño Multimedial"},
+              {"dia": 2, "inicio": "14:00", "fin": "17:00", "materia": "Álgebra II", "docente": "Suárez Lucía", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 2, "inicio": "17:00", "fin": "20:00", "materia": "Bioquímica General", "docente": "Pereyra Diego", "comision": "COM 1", "carrera": "Lic. en Nutrición"},
+              {"dia": 3, "inicio": "08:00", "fin": "11:00", "materia": "Historia del Diseño", "docente": "Vega Martín", "comision": "COM 1", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "11:00", "fin": "14:00", "materia": "Sociología", "docente": "Benítez Sergio", "comision": "COM 6", "carrera": "Lic. en Administración"},
+              {"dia": 3, "inicio": "14:00", "fin": "17:00", "materia": "Electrónica Analógica", "docente": "Campos Raúl", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 4, "inicio": "20:00", "fin": "23:00", "materia": "Estadística", "docente": "Benítez Sergio", "comision": "COM 2", "carrera": "Lic. en Administración"},
+              {"dia": 5, "inicio": "14:00", "fin": "17:00", "materia": "Historia del Diseño", "docente": "Molina Julia", "comision": "COM 4", "carrera": "Diseño Multimedial"}
+            ]
+          },
+          {
+            "id": "do-14",
+            "etiqueta": "14",
+            "compu": true,
+            "horarios": [
+              {"dia": 1, "inicio": "11:00", "fin": "14:00", "materia": "Diseño Web", "docente": "Acosta Brenda", "comision": "COM 5", "carrera": "Diseño Multimedial"},
+              {"dia": 1, "inicio": "17:00", "fin": "20:00", "materia": "Bases de Datos", "docente": "Campos Raúl", "comision": "COM 1", "carrera": "Ingeniería Electrónica"},
+              {"dia": 2, "inicio": "08:00", "fin": "11:00", "materia": "Dibujo Asistido por PC", "docente": "Pereyra Diego", "comision": "COM 3", "carrera": "Ingeniería Industrial"},
+              {"dia": 2, "inicio": "11:00", "fin": "14:00", "materia": "Programación II", "docente": "Bonucci Pablo", "comision": "COM 3", "carrera": "Ingeniería Electrónica"},
+              {"dia": 2, "inicio": "17:00", "fin": "20:00", "materia": "Informática I", "docente": "Lombardi Hernán", "comision": "COM 2", "carrera": "Lic. en Administración"},
+              {"dia": 2, "inicio": "20:00", "fin": "23:00", "materia": "Programación II", "docente": "Campos Raúl", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "14:00", "fin": "17:00", "materia": "Bases de Datos", "docente": "Acosta Brenda", "comision": "COM 5", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "17:00", "fin": "20:00", "materia": "Bases de Datos", "docente": "Ruiz Andrés", "comision": "COM 2", "carrera": "Ingeniería Electrónica"},
+              {"dia": 3, "inicio": "20:00", "fin": "23:00", "materia": "Diseño Web", "docente": "Suárez Lucía", "comision": "COM 4", "carrera": "Diseño Multimedial"},
+              {"dia": 4, "inicio": "08:00", "fin": "11:00", "materia": "Edición Digital", "docente": "Ferreyra Tomás", "comision": "COM 3", "carrera": "Diseño Multimedial"},
+              {"dia": 4, "inicio": "11:00", "fin": "14:00", "materia": "Bases de Datos", "docente": "Paz Federico", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 4, "inicio": "14:00", "fin": "17:00", "materia": "Edición Digital", "docente": "Sosa Gustavo", "comision": "COM 2", "carrera": "Diseño Multimedial"},
+              {"dia": 4, "inicio": "20:00", "fin": "23:00", "materia": "Informática I", "docente": "Gradin Marcelo", "comision": "COM 5", "carrera": "Lic. en Administración"},
+              {"dia": 5, "inicio": "08:00", "fin": "11:00", "materia": "Bases de Datos", "docente": "Ortiz Valeria", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 5, "inicio": "14:00", "fin": "17:00", "materia": "Diseño Web", "docente": "Méndez Carla", "comision": "COM 3", "carrera": "Diseño Multimedial"},
+              {"dia": 5, "inicio": "17:00", "fin": "20:00", "materia": "Edición Digital", "docente": "Suárez Lucía", "comision": "COM 2", "carrera": "Diseño Multimedial"},
+              {"dia": 5, "inicio": "20:00", "fin": "23:00", "materia": "Diseño Web", "docente": "Molina Julia", "comision": "COM 1", "carrera": "Diseño Multimedial"},
+              {"dia": 6, "inicio": "14:00", "fin": "17:00", "materia": "Edición Digital", "docente": "Gradin Marcelo", "comision": "COM 1", "carrera": "Diseño Multimedial"}
+            ]
+          },
+          {
+            "id": "do-15",
+            "etiqueta": "15",
+            "compu": true,
+            "horarios": [
+              {"dia": 1, "inicio": "08:00", "fin": "11:00", "materia": "Dibujo Asistido por PC", "docente": "Pereyra Diego", "comision": "COM 2", "carrera": "Ingeniería Industrial"},
+              {"dia": 1, "inicio": "17:00", "fin": "20:00", "materia": "Diseño Web", "docente": "Funes Marta", "comision": "COM 1", "carrera": "Diseño Multimedial"},
+              {"dia": 2, "inicio": "08:00", "fin": "11:00", "materia": "Diseño Web", "docente": "Ferreyra Tomás", "comision": "COM 5", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "08:00", "fin": "11:00", "materia": "Edición Digital", "docente": "Romero Paula", "comision": "COM 6", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "11:00", "fin": "14:00", "materia": "Edición Digital", "docente": "Ferreyra Tomás", "comision": "COM 6", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "14:00", "fin": "17:00", "materia": "Edición Digital", "docente": "Navarro Silvia", "comision": "COM 3", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "17:00", "fin": "20:00", "materia": "Diseño Web", "docente": "Benítez Sergio", "comision": "COM 6", "carrera": "Diseño Multimedial"},
+              {"dia": 5, "inicio": "11:00", "fin": "14:00", "materia": "Edición Digital", "docente": "Gradin Marcelo", "comision": "COM 6", "carrera": "Diseño Multimedial"},
+              {"dia": 5, "inicio": "17:00", "fin": "20:00", "materia": "Edición Digital", "docente": "Ferreyra Tomás", "comision": "COM 4", "carrera": "Diseño Multimedial"},
+              {"dia": 5, "inicio": "20:00", "fin": "23:00", "materia": "Edición Digital", "docente": "Paz Federico", "comision": "COM 1", "carrera": "Diseño Multimedial"},
+              {"dia": 6, "inicio": "08:00", "fin": "11:00", "materia": "Bases de Datos", "docente": "Molina Julia", "comision": "COM 2", "carrera": "Ingeniería Electrónica"},
+              {"dia": 6, "inicio": "14:00", "fin": "17:00", "materia": "Bases de Datos", "docente": "Acosta Brenda", "comision": "COM 6", "carrera": "Ingeniería Electrónica"}
+            ]
+          },
+          {
+            "id": "do-16",
+            "etiqueta": "16",
+            "compu": true,
+            "horarios": [
+              {"dia": 1, "inicio": "08:00", "fin": "11:00", "materia": "Programación II", "docente": "Giménez Laura", "comision": "COM 4", "carrera": "Ingeniería Electrónica"},
+              {"dia": 1, "inicio": "11:00", "fin": "14:00", "materia": "Dibujo Asistido por PC", "docente": "Méndez Carla", "comision": "COM 2", "carrera": "Ingeniería Industrial"},
+              {"dia": 1, "inicio": "17:00", "fin": "20:00", "materia": "Diseño Web", "docente": "Molina Julia", "comision": "COM 3", "carrera": "Diseño Multimedial"},
+              {"dia": 1, "inicio": "20:00", "fin": "23:00", "materia": "Dibujo Asistido por PC", "docente": "Benítez Sergio", "comision": "COM 4", "carrera": "Ingeniería Industrial"},
+              {"dia": 2, "inicio": "08:00", "fin": "11:00", "materia": "Dibujo Asistido por PC", "docente": "Vega Martín", "comision": "COM 3", "carrera": "Ingeniería Industrial"},
+              {"dia": 3, "inicio": "11:00", "fin": "14:00", "materia": "Diseño Web", "docente": "Lombardi Hernán", "comision": "COM 6", "carrera": "Diseño Multimedial"},
+              {"dia": 4, "inicio": "17:00", "fin": "20:00", "materia": "Dibujo Asistido por PC", "docente": "Ruiz Andrés", "comision": "COM 2", "carrera": "Ingeniería Industrial"},
+              {"dia": 5, "inicio": "08:00", "fin": "11:00", "materia": "Diseño Web", "docente": "Sosa Gustavo", "comision": "COM 4", "carrera": "Diseño Multimedial"},
+              {"dia": 5, "inicio": "11:00", "fin": "14:00", "materia": "Dibujo Asistido por PC", "docente": "Gradin Marcelo", "comision": "COM 3", "carrera": "Ingeniería Industrial"},
+              {"dia": 6, "inicio": "14:00", "fin": "17:00", "materia": "Dibujo Asistido por PC", "docente": "Navarro Silvia", "comision": "COM 6", "carrera": "Ingeniería Industrial"}
+            ]
+          },
+          {
+            "id": "do-17",
+            "etiqueta": "17",
+            "compu": true,
+            "horarios": [
+              {"dia": 2, "inicio": "08:00", "fin": "11:00", "materia": "Programación II", "docente": "Ortiz Valeria", "comision": "COM 1", "carrera": "Ingeniería Electrónica"},
+              {"dia": 2, "inicio": "17:00", "fin": "20:00", "materia": "Diseño Web", "docente": "Romero Paula", "comision": "COM 3", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "08:00", "fin": "11:00", "materia": "Edición Digital", "docente": "Ortiz Valeria", "comision": "COM 1", "carrera": "Diseño Multimedial"},
+              {"dia": 3, "inicio": "20:00", "fin": "23:00", "materia": "Dibujo Asistido por PC", "docente": "Ortiz Valeria", "comision": "COM 4", "carrera": "Ingeniería Industrial"},
+              {"dia": 4, "inicio": "17:00", "fin": "20:00", "materia": "Informática I", "docente": "Méndez Carla", "comision": "COM 3", "carrera": "Lic. en Administración"},
+              {"dia": 5, "inicio": "08:00", "fin": "11:00", "materia": "Bases de Datos", "docente": "Vega Martín", "comision": "COM 1", "carrera": "Ingeniería Electrónica"},
+              {"dia": 5, "inicio": "14:00", "fin": "17:00", "materia": "Informática I", "docente": "Bonucci Pablo", "comision": "COM 6", "carrera": "Lic. en Administración"},
+              {"dia": 5, "inicio": "20:00", "fin": "23:00", "materia": "Programación II", "docente": "Gradin Marcelo", "comision": "COM 6", "carrera": "Ingeniería Electrónica"},
+              {"dia": 6, "inicio": "11:00", "fin": "14:00", "materia": "Programación II", "docente": "Ferreyra Tomás", "comision": "COM 1", "carrera": "Ingeniería Electrónica"}
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

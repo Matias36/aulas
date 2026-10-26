@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UNM Aulas · Edificio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Arimo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-activo="inicio">
+<main class="pantalla interna sin-pad">
+  <header class="hero">
+    <div id="fondo" class="fondo"></div>
+    <div class="barra">
+      <a href="inicio.html" aria-label="Volver"><svg viewBox="0 0 24 24"><path d="M15 3L6 12l9 9"/></svg></a>
+      <h1 id="titulo"></h1>
+      <button id="vista" type="button"></button>
+    </div>
+  </header>
+  <div class="hoja">
+    <div class="filtros" role="group" aria-label="Filtrar aulas">
+      <button type="button" data-filtro="todas" aria-pressed="true">Todas</button>
+      <button type="button" data-filtro="libres" aria-pressed="false"><i class="dot libre"></i>Libres</button>
+      <button type="button" data-filtro="ocupadas" aria-pressed="false"><i class="dot ocupada"></i>Ocupadas</button>
+    </div>
+    <div id="contenido"></div>
+  </div>
+</main>
+<script src="js/nav.js"></script>
+<script src="js/comun.js"></script>
+<script src="js/edificio.js"></script>
+</body>
+</html>

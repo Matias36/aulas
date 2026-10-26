@@ -1,0 +1,9 @@
+[
+  { "id": 1, "nombre": "Diseño Multimedial" },
+  { "id": 2, "nombre": "Ingeniería Electrónica" },
+  { "id": 3, "nombre": "Ingeniería Industrial" },
+  { "id": 4, "nombre": "Lic. en Administración" },
+  { "id": 5, "nombre": "Lic. en Psicología" },
+  { "id": 6, "nombre": "Lic. en Nutrición" },
+  { "id": 7, "nombre": "Lic. en Enfermería" }
+]

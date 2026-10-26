@@ -1,0 +1,8 @@
+[
+  { "id": 1, "fecha": "2026-10-01", "titulo": "ExpoUNM 2026" },
+  { "id": 2, "fecha": "2026-10-12", "titulo": "Día del Respeto a la Diversidad Cultural" },
+  { "id": 3, "fecha": "2026-10-28", "titulo": "Cierre de inscripción a mesas de examen" },
+  { "id": 4, "fecha": "2026-11-23", "titulo": "Día de la Soberanía Nacional (feriado trasladado)" },
+  { "id": 5, "fecha": "2026-12-08", "titulo": "Día de la Inmaculada Concepción (feriado)" },
+  { "id": 6, "fecha": "2026-12-14", "titulo": "Inicio de mesas de examen de diciembre" }
+]

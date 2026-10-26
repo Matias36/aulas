@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UNM Aulas · Inicio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Arimo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-activo="inicio">
+<main class="pantalla interna">
+  <header class="cabecera">
+    <h1 id="saludo" class="saludo">Seleccioná un edificio</h1>
+    <button id="campana" class="campana" type="button" aria-label="Notificaciones">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a1.5 1.5 0 011.5 1.5v.6A6 6 0 0118 10v4l2 3v1H4v-1l2-3v-4a6 6 0 014.5-5.9v-.6A1.5 1.5 0 0112 2zm-2.5 17h5a2.5 2.5 0 01-5 0z"/></svg>
+      <span class="punto" hidden></span>
+    </button>
+  </header>
+
+  <label class="buscador">
+    <i class="ico ico-lupa" aria-hidden="true"></i>
+    <input id="buscar" type="search" placeholder="Buscar" aria-label="Buscar edificio o materia">
+  </label>
+
+  <ul id="edificios" class="edificios"></ul>
+  <section id="materias" class="piso" hidden>
+    <h2>Materias</h2>
+    <ul id="resultados" class="resultados"></ul>
+  </section>
+  <p id="vacio" class="vacio" hidden>No hay edificios con ese nombre.</p>
+</main>
+<script src="js/nav.js"></script>
+<script src="js/comun.js"></script>
+<script src="js/inicio.js"></script>
+</body>
+</html>

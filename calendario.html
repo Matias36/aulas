@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UNM Aulas · Calendario</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Arimo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-activo="calendario">
+<main class="pantalla interna">
+  <h1 class="titulo-cal">Calendario Académico</h1>
+  <div class="mes-nav">
+    <button id="prev" type="button" aria-label="Mes anterior">‹</button>
+    <h2 id="mes" aria-live="polite"></h2>
+    <button id="next" type="button" aria-label="Mes siguiente">›</button>
+  </div>
+  <div id="cal" class="cal"></div>
+  <section class="fechas">
+    <h2>Fechas importantes</h2>
+    <ul id="lista"></ul>
+  </section>
+</main>
+<script src="js/nav.js"></script>
+<script src="js/comun.js"></script>
+<script src="js/calendario.js"></script>
+</body>
+</html>

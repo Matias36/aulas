@@ -1,0 +1,7 @@
+[
+  { "id": "historico", "nombre": "Histórico",   "foto": "img/historico.WEBP", "color": ["#8d98a3", "#566370"] },
+  { "id": "daract1",   "nombre": "Daract I",    "foto": "img/daract1.WEBP",   "color": ["#b9a46a", "#5d6f78"] },
+  { "id": "daract2",   "nombre": "Daract II",   "foto": "img/daract2.WEBP",   "color": ["#7f9a8c", "#3f5a62"] },
+  { "id": "dorrego1",  "nombre": "Dorrego I",   "foto": "img/dorrego1.WEBP",  "color": ["#3f9a8a", "#2d4d57"] },
+  { "id": "laboratorio","nombre": "Laboratorio","foto": "img/laboratorio.WEBP","color": ["#8a7aa8", "#3d3560"] }
+]

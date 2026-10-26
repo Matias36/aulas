@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UNM Aulas · Administración</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Arimo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="pantalla registro panel-admin">
+  <header class="admin-cab">
+    <h1>Administración</h1>
+    <div class="admin-botones">
+      <a class="mini" href="inicio.html">Ver app</a>
+      <button class="mini" id="salir" type="button">Salir</button>
+    </div>
+  </header>
+
+  <p id="estado" class="exito" role="status" hidden></p>
+
+  <div class="filtros admin-tabs" role="group" aria-label="Secciones">
+    <button type="button" data-tab="clases" aria-pressed="true">Clases</button>
+    <button type="button" data-tab="reservas" aria-pressed="false">Reservas</button>
+    <button type="button" data-tab="fechas" aria-pressed="false">Fechas</button>
+    <button type="button" data-tab="historial" aria-pressed="false">Historial</button>
+  </div>
+
+  <!-- ===== Clases ===== -->
+  <section id="tab-clases">
+    <div id="vista-lista">
+      <label class="buscador">
+        <i class="ico ico-lupa" aria-hidden="true"></i>
+        <input id="q" type="search" placeholder="Buscar materia o docente" aria-label="Buscar una clase para cambiarla">
+      </label>
+      <section id="sec-res" class="fechas" hidden>
+        <h2>Resultados</h2>
+        <ul id="res" class="resultados"></ul>
+      </section>
+      <p id="sin-res" class="vacio" hidden>No encontramos clases con ese nombre.</p>
+      <section class="fechas">
+        <h2>Cambios por fecha</h2>
+        <ul id="exc"></ul>
+      </section>
+    </div>
+
+    <form id="editor" hidden novalidate>
+      <h2 id="ed-titulo" class="ed-titulo"></h2>
+      <p id="ed-actual" class="ed-actual"></p>
+
+      <div class="grupo">
+        <span class="etiqueta">¿Qué querés hacer?</span>
+        <div class="filtros">
+          <button type="button" data-accion="cambiar" aria-pressed="true">Cambiar</button>
+          <button type="button" data-accion="cancelar" aria-pressed="false">Cancelar</button>
+        </div>
+      </div>
+      <div class="grupo">
+        <span class="etiqueta">¿Cuándo vale?</span>
+        <div class="filtros">
+          <button type="button" data-alcance="todas" aria-pressed="true">Siempre</button>
+          <button type="button" data-alcance="fecha" aria-pressed="false">Un solo día</button>
+        </div>
+      </div>
+
+      <div class="grupo" id="ed-fecha-g" hidden>
+        <label class="etiqueta" for="ed-fecha">Fecha</label>
+        <div class="campo"><input id="ed-fecha" type="date"></div>
+        <p id="ed-fecha-ayuda" class="ayuda"></p>
+      </div>
+
+      <div id="ed-datos">
+        <div class="grupo">
+          <label class="etiqueta" for="ed-aula">Aula</label>
+          <div class="campo"><select id="ed-aula"></select></div>
+        </div>
+        <div class="grupo" id="ed-dia-g">
+          <label class="etiqueta" for="ed-dia">Día</label>
+          <div class="campo">
+            <select id="ed-dia">
+              <option value="1">Lunes</option><option value="2">Martes</option><option value="3">Miércoles</option>
+              <option value="4">Jueves</option><option value="5">Viernes</option><option value="6">Sábado</option>
+            </select>
+          </div>
+        </div>
+        <div class="fila-dos">
+          <div class="grupo"><label class="etiqueta" for="ed-inicio">Desde</label><div class="campo"><input id="ed-inicio" type="time"></div></div>
+          <div class="grupo"><label class="etiqueta" for="ed-fin">Hasta</label><div class="campo"><input id="ed-fin" type="time"></div></div>
+        </div>
+      </div>
+
+      <p id="ed-aviso-baja" class="alerta" hidden>Se elimina la clase definitivamente y deja de figurar en "Mis cursos" de quienes la siguen.</p>
+
+      <div class="grupo">
+        <label class="etiqueta" for="ed-motivo">Motivo (opcional)</label>
+        <div class="campo"><input id="ed-motivo" type="text" maxlength="150" placeholder="Se agrega al aviso"></div>
+      </div>
+      <label class="check"><input id="ed-avisar" type="checkbox" checked> Avisar a quienes siguen esta clase</label>
+
+      <div id="ed-conflictos" class="conflictos" hidden></div>
+      <p id="ed-error" class="error" role="alert"></p>
+      <button id="ed-guardar" class="btn-primario" type="submit">Guardar cambios</button>
+      <button id="ed-volver" class="salir" type="button">Volver</button>
+    </form>
+  </section>
+
+  <!-- ===== Reservas ===== -->
+  <section id="tab-reservas" hidden>
+    <form id="form-reserva" novalidate>
+      <div class="grupo">
+        <label class="etiqueta" for="rs-aula">Aula</label>
+        <div class="campo"><select id="rs-aula"></select></div>
+      </div>
+      <div class="grupo">
+        <label class="etiqueta" for="rs-fecha">Fecha</label>
+        <div class="campo"><input id="rs-fecha" type="date"></div>
+      </div>
+      <div class="fila-dos">
+        <div class="grupo"><label class="etiqueta" for="rs-inicio">Desde</label><div class="campo"><input id="rs-inicio" type="time"></div></div>
+        <div class="grupo"><label class="etiqueta" for="rs-fin">Hasta</label><div class="campo"><input id="rs-fin" type="time"></div></div>
+      </div>
+      <div class="grupo">
+        <label class="etiqueta" for="rs-titulo">Título</label>
+        <div class="campo"><input id="rs-titulo" type="text" maxlength="150" placeholder="Ej.: Exposición de Diseño"></div>
+      </div>
+      <div class="grupo">
+        <label class="etiqueta" for="rs-org">Organiza (opcional)</label>
+        <div class="campo"><input id="rs-org" type="text" maxlength="120" placeholder="Ej.: Secretaría de Extensión"></div>
+      </div>
+      <div id="rs-conflictos" class="conflictos" hidden></div>
+      <p id="rs-error" class="error" role="alert"></p>
+      <button id="rs-guardar" class="btn-primario" type="submit">Reservar aula</button>
+    </form>
+    <section class="fechas">
+      <h2>Próximas reservas</h2>
+      <ul id="rs-lista"></ul>
+    </section>
+  </section>
+
+  <!-- ===== Fechas del calendario ===== -->
+  <section id="tab-fechas" hidden>
+    <form id="form-fecha" novalidate>
+      <div class="grupo">
+        <label class="etiqueta" for="fe-titulo">Título</label>
+        <div class="campo"><input id="fe-titulo" type="text" maxlength="200" placeholder="Ej.: Cierre de inscripción a mesas"></div>
+      </div>
+      <div class="fila-dos">
+        <div class="grupo"><label class="etiqueta" for="fe-fecha">Fecha</label><div class="campo"><input id="fe-fecha" type="date"></div></div>
+        <div class="grupo"><label class="etiqueta" for="fe-fin">Hasta (opcional)</label><div class="campo"><input id="fe-fin" type="date"></div></div>
+      </div>
+      <p id="fe-error" class="error" role="alert"></p>
+      <button class="btn-primario" type="submit">Agregar al calendario</button>
+    </form>
+    <section class="fechas">
+      <h2>Próximas fechas</h2>
+      <ul id="fe-lista"></ul>
+    </section>
+  </section>
+
+  <!-- ===== Historial ===== -->
+  <section id="tab-historial" class="fechas" hidden>
+    <h2>Últimos cambios</h2>
+    <ul id="hi-lista"></ul>
+  </section>
+</main>
+<script src="js/comun.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

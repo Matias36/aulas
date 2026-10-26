@@ -1,0 +1,6 @@
+[
+  { "id": 1, "usuario": 1, "dia": 1, "inicio": "12:00", "fin": "15:00", "edificio": "Daract I", "aula": "01", "materia": "Análisis Matemático II", "docente": "Bonucci Pablo", "comision": "COM 1", "carrera": "Ingeniería Electrónica", "nota": "" },
+  { "id": 2, "usuario": 1, "dia": 1, "inicio": "13:00", "fin": "17:00", "edificio": "Histórico", "aula": "J101", "materia": "Taller de Diseño Multimedial IV", "docente": "Rodríguez Natalia Monserrat", "comision": "COM 4", "carrera": "Diseño Multimedial", "nota": "Comprar Kit de Arduino" },
+  { "id": 3, "usuario": 1, "dia": 1, "inicio": "18:00", "fin": "21:00", "edificio": "Daract II", "aula": "11-13", "materia": "Taller de Diseño II", "docente": "Rodríguez Natalia Monserrat", "comision": "COM 4", "carrera": "Diseño Multimedial", "nota": "" },
+  { "id": 4, "usuario": 1, "dia": 3, "inicio": "12:00", "fin": "15:00", "edificio": "Daract II", "aula": "14", "materia": "Programación I", "docente": "Vega Martín", "comision": "COM 3", "carrera": "Ingeniería Electrónica", "nota": "" }
+]
