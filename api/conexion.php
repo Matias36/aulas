@@ -15,7 +15,7 @@ function responder_error($codigo, $mensaje) {
 
 try {
     $pdo = new PDO(
-        'mysql:host=localhost;dbname=unm_aulas;charset=utf8mb4',
+        'mysql:host=localhost;dbname=if0_43272434_unm_aulas;charset=utf8mb4',
         'root',
         '',
         [
