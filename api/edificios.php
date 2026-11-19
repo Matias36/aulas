@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // Devuelve los edificios con la misma forma que data/edificios.json
 require __DIR__ . '/conexion.php';
 

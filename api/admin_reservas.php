@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // Reservar o bloquear un aula para un día puntual (charla, exposición, reunión...).
 //   GET                          -> próximas reservas
 //   POST {accion:"crear", aula, fecha, inicio, fin, titulo, organizador, forzar}

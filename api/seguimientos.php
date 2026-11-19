@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // Clases que el alumno decide seguir (campanitas), con su nota personal.
 //   GET                 -> "Mis cursos" para Perfil: { "cursos": [ ... ] }
 //   GET  ?modo=ids      -> { "ids": [horarios seguidos], "conNota": [los que tienen nota] }

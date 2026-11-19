@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // ¿Hay una sesión abierta? Devuelve el usuario, o 401 si no.
 require __DIR__ . '/sesion_lib.php';
 

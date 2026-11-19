@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // Avisos del alumno (la campana de Inicio).
 //   GET                 -> { "noLeidas": n, "items": [ { id, mensaje, enlace, leida, creada } ] }  (los últimos 50)
 //   GET  ?modo=contar   -> { "noLeidas": n }   (liviano, para el puntito de la campana)

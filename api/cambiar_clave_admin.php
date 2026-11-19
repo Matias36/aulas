@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // Para cambiar la contraseña del administrador. Se abre desde la PC del servidor:
 //   http://localhost/unm-aulas/api/cambiar_clave_admin.php
 // Cuando termines, borrá este archivo.

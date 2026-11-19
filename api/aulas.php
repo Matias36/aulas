@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // Devuelve las aulas con la misma forma que data/aulas.json:
 //   { "daract2": { "pisos": [ { "nombre": "...", "aulas": [ {..., "horarios": [...] } ] } ] } }
 //

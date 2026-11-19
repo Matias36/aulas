@@ -1,4 +1,6 @@
 <?php
+
+require_once __DIR__ . '/no_cache.php';
 // Lista de aulas para los desplegables del panel (sin los bloques informativos, como la Biblioteca)
 require __DIR__ . '/admin_lib.php';
 exigir_admin($pdo);

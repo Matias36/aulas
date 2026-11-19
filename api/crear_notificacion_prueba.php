@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // SOLO PARA PROBAR la campana. Se abre desde la PC: http://localhost/unm-aulas/api/crear_notificacion_prueba.php?dni=1
 // Crea dos avisos de ejemplo para ese DNI. Después se puede borrar este archivo.
 require __DIR__ . '/conexion.php';

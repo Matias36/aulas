@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // Fechas del calendario académico. Cada una tiene "fecha" (inicio) y, si dura varios días, "fin".
 require __DIR__ . '/conexion.php';
 

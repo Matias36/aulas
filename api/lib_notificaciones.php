@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // Crear avisos. El panel de administrador va a usar estas funciones cada vez que cambie un horario.
 
 // Un aviso para una persona

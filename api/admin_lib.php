@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // Funciones del panel de administrador. Todos los api/admin_*.php pasan por acá.
 require_once __DIR__ . '/sesion_lib.php';
 require_once __DIR__ . '/lib_horarios.php';

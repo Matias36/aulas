@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // Funciones compartidas por aulas.php y seguimientos.php
 
 const PARTICULAS = ['de', 'del', 'di', 'da', 'van', 'dell', 'la', 'los'];

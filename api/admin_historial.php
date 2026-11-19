@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // Últimos cambios hechos desde el panel de administrador
 require __DIR__ . '/admin_lib.php';
 exigir_admin($pdo);

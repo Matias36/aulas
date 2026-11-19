@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // Funciones compartidas de sesión. Lo incluyen login, registro, logout y sesión.
 require_once __DIR__ . '/conexion.php';
 

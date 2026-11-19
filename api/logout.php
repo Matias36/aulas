@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // Cerrar sesión (destruye la sesión en el servidor)
 require __DIR__ . '/sesion_lib.php';
 solo_post();

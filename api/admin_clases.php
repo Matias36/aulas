@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // Panel de administrador: buscar clases y cambiarlas, cancelarlas o eliminarlas.
 //   GET ?q=texto        -> clases que coinciden
 //   GET ?excepciones=1  -> cambios por fecha que todavía no pasaron

@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // Buscador de materias: GET buscar.php?q=morfo
 // Busca por nombre de materia o de docente (sin importar tildes ni mayúsculas) entre las clases
 // del cuatrimestre vigente y las anuales. Devuelve en qué aula, día y horario se cursa cada una.

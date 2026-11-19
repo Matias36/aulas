@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // Crear cuenta. Recibe JSON: { "dni", "nombre", "apellido", "carrera" (id), "clave" }
 require __DIR__ . '/sesion_lib.php';
 solo_post();

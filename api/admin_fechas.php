@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/no_cache.php';
 // Fechas del calendario académico.
 //   GET                                      -> las que todavía no pasaron
 //   POST {accion:"crear", titulo, fecha, fin}   (fin es opcional: si dura varios días)
